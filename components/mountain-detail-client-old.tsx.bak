@@ -1,0 +1,362 @@
+"use client"
+
+import { Mountain } from "@/types/mountain"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import {
+  Mountain as MountainIcon,
+  MapPin,
+  Calendar,
+  TrendingUp,
+  AlertTriangle,
+  Users,
+  DollarSign,
+  Clock,
+  Thermometer,
+  Wind,
+  Backpack,
+  ArrowLeft,
+} from "lucide-react"
+import { motion } from "framer-motion"
+import Link from "next/link"
+import Image from "next/image"
+import { MountainStats } from "./mountain-stats"
+
+interface MountainDetailClientProps {
+  mountain: Mountain
+}
+
+export function MountainDetailClient({ mountain }: MountainDetailClientProps) {
+  return (
+    <div className="min-h-screen pt-20 pb-16 bg-gradient-to-b from-black via-gray-950 to-black">
+      {/* Back Button - Fixed at top */}
+      <div className="fixed top-24 left-4 z-50">
+        <Link href="/">
+          <Button variant="outline" className="backdrop-blur-md bg-black/80 border-white/10 hover:border-primary/50 hover:bg-black/90 font-medium gap-2 text-white hover:text-primary transition-all">
+            <ArrowLeft className="h-4 w-4" />
+            Retour
+          </Button>
+        </Link>
+      </div>
+
+      {/* Hero Section with Real Image */}
+      <section className="relative h-[70vh] flex items-end overflow-hidden">
+        {/* Background Image */}
+        {mountain.images[0] && (
+          <div className="absolute inset-0">
+            <Image
+              src={mountain.images[0]}
+              alt={mountain.name}
+              fill
+              className="object-cover"
+              priority
+              quality={90}
+            />
+          </div>
+        )}
+
+        {/* Dark Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/85 to-black/60 z-10" />
+
+        <div className="container mx-auto px-4 pb-12 relative z-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-4xl"
+          >
+            <Badge variant="secondary" className="mb-4 backdrop-blur-md bg-black/60 border-white/20 text-white uppercase tracking-wider">
+              {mountain.continent}
+            </Badge>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight leading-none">
+              {mountain.name}
+            </h1>
+            <div className="flex flex-wrap gap-6 text-gray-300 text-lg">
+              <div className="flex items-center gap-2">
+                <MapPin className="h-5 w-5 text-primary" />
+                <span>{mountain.country}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MountainIcon className="h-5 w-5 text-primary" />
+                <span className="font-bold text-white">{mountain.stats.altitude.toLocaleString()}<span className="text-primary">m</span></span>
+              </div>
+              <Badge variant="outline" className="border-white/30 text-white uppercase tracking-wider">
+                {mountain.expedition.difficulty}
+              </Badge>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <div className="container mx-auto px-4 -mt-8 relative z-30">
+        {/* Quick Stats Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
+          <StatsCard
+            icon={TrendingUp}
+            label="Taux de réussite"
+            value={`${mountain.stats.successRate}%`}
+            variant="success"
+          />
+          <StatsCard
+            icon={AlertTriangle}
+            label="Taux de mortalité"
+            value={`${mountain.stats.deathRate}%`}
+            variant="danger"
+          />
+          <StatsCard
+            icon={Clock}
+            label="Durée moyenne"
+            value={`${mountain.stats.averageDuration} jours`}
+          />
+          <StatsCard
+            icon={Calendar}
+            label="Première ascension"
+            value={mountain.stats.firstAscentYear.toString()}
+          />
+        </div>
+
+        {/* Main Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Left Column - Main Content */}
+          <div className="lg:col-span-2 space-y-8">
+            {/* Description */}
+            <Card className="border-white/10 bg-gradient-to-br from-gray-900 to-black backdrop-blur-md">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-white">À propos</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300 leading-relaxed text-base">
+                  {mountain.description}
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Tabs */}
+            <Tabs defaultValue="stats" className="w-full">
+              <TabsList className="grid w-full grid-cols-3 bg-black/60 border border-white/10">
+                <TabsTrigger value="stats" className="data-[state=active]:bg-primary data-[state=active]:text-white text-gray-400 font-medium uppercase tracking-wider text-sm">Statistiques</TabsTrigger>
+                <TabsTrigger value="history" className="data-[state=active]:bg-primary data-[state=active]:text-white text-gray-400 font-medium uppercase tracking-wider text-sm">Histoire</TabsTrigger>
+                <TabsTrigger value="expedition" className="data-[state=active]:bg-primary data-[state=active]:text-white text-gray-400 font-medium uppercase tracking-wider text-sm">Expédition</TabsTrigger>
+              </TabsList>
+
+              <TabsContent value="stats" className="mt-6">
+                <MountainStats mountain={mountain} />
+              </TabsContent>
+
+              <TabsContent value="history" className="mt-6">
+                <Card className="border-orange-500/30 bg-black/60 backdrop-blur-md">
+                  <CardHeader>
+                    <CardTitle className="text-2xl font-bold text-orange-400">Première ascension</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="h-5 w-5 text-orange-400" />
+                      <span className="font-medium text-orange-200">
+                        {new Date(mountain.firstAscent.date).toLocaleDateString("fr-FR", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </span>
+                    </div>
+                    <Separator className="bg-orange-500/30" />
+                    <div>
+                      <h4 className="font-bold mb-3 flex items-center gap-2 text-lg text-orange-400">
+                        <Users className="h-5 w-5" />
+                        Alpinistes pionniers
+                      </h4>
+                      <ul className="space-y-2">
+                        {mountain.firstAscent.climbers.map((climber, i) => (
+                          <li key={i} className="flex items-center gap-2">
+                            <span className="h-2 w-2 rounded-full bg-orange-500" />
+                            <span className="text-orange-200">
+                              {climber.name}
+                              {climber.nationality && (
+                                <span className="text-orange-300/50 ml-2">
+                                  ({climber.nationality})
+                                </span>
+                              )}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    {mountain.facts && mountain.facts.length > 0 && (
+                      <div>
+                        <Separator className="bg-orange-500/30 my-4" />
+                        <h4 className="font-bold mb-3 text-lg text-orange-400">Faits marquants</h4>
+                        <ul className="space-y-2">
+                          {mountain.facts.map((fact, i) => (
+                            <li key={i} className="flex items-start gap-2">
+                              <span className="h-2 w-2 rounded-full bg-orange-500 mt-2 flex-shrink-0" />
+                              <span className="text-orange-200/70">{fact}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="expedition" className="mt-6">
+                <div className="space-y-6">
+                  <Card className="border-orange-500/30 bg-black/60 backdrop-blur-md">
+                    <CardHeader>
+                      <CardTitle className="text-2xl font-bold text-orange-400">Informations pratiques</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <div>
+                        <h4 className="font-bold mb-3 text-orange-400">Meilleures saisons</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {mountain.expedition.bestSeasons.map((season) => (
+                            <Badge key={season} variant="secondary" className="uppercase tracking-wider bg-orange-500/20 text-orange-300 border-orange-500/30">
+                              {season}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                      <Separator className="bg-orange-500/30" />
+                      <div>
+                        <h4 className="font-bold mb-3 flex items-center gap-2 text-orange-400">
+                          <DollarSign className="h-5 w-5" />
+                          Budget estimé
+                        </h4>
+                        <p className="text-3xl font-extrabold text-orange-400">
+                          {mountain.expedition.estimatedBudget.min.toLocaleString()} -{" "}
+                          {mountain.expedition.estimatedBudget.max.toLocaleString()}{" "}
+                          {mountain.expedition.estimatedBudget.currency}
+                        </p>
+                      </div>
+                      <Separator className="bg-orange-500/30" />
+                      <div>
+                        <h4 className="font-bold mb-3 flex items-center gap-2 text-orange-400">
+                          <Backpack className="h-5 w-5" />
+                          Équipement requis
+                        </h4>
+                        <ul className="grid grid-cols-2 gap-2">
+                          {mountain.expedition.requiredEquipment.map((item) => (
+                            <li key={item} className="flex items-center gap-2">
+                              <span className="h-2 w-2 rounded-full bg-orange-500" />
+                              <span className="text-sm text-orange-200/70">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </TabsContent>
+            </Tabs>
+          </div>
+
+          {/* Right Column - Sidebar */}
+          <div className="space-y-6">
+            {/* Dangers Card */}
+            <Card className="border-red-500/50 bg-black/60 backdrop-blur-md">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-red-400 text-xl font-bold">
+                  <AlertTriangle className="h-5 w-5" />
+                  Dangers
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  {mountain.dangers.map((danger) => (
+                    <li key={danger} className="flex items-center gap-2">
+                      <span className="h-2 w-2 rounded-full bg-red-500" />
+                      <span className="text-sm text-orange-200/70">{danger}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Location Card */}
+            <Card className="border-orange-500/30 bg-black/60 backdrop-blur-md">
+              <CardHeader>
+                <CardTitle className="text-xl font-bold text-orange-400">Localisation</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div>
+                  <span className="text-sm text-orange-300/70 uppercase tracking-wider font-semibold">Pays</span>
+                  <p className="font-medium text-orange-200">{mountain.country}</p>
+                </div>
+                <Separator className="bg-orange-500/30" />
+                <div>
+                  <span className="text-sm text-orange-300/70 uppercase tracking-wider font-semibold">Massif</span>
+                  <p className="font-medium text-orange-200">{mountain.range}</p>
+                </div>
+                <Separator className="bg-orange-500/30" />
+                <div>
+                  <span className="text-sm text-orange-300/70 uppercase tracking-wider font-semibold">Coordonnées</span>
+                  <p className="font-mono text-sm text-orange-200/70">
+                    {mountain.coordinates.latitude.toFixed(4)}°N,{" "}
+                    {mountain.coordinates.longitude.toFixed(4)}°E
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* CTA Card */}
+            <Card className="bg-orange-500/10 border-orange-500/30 backdrop-blur-md">
+              <CardContent className="pt-6">
+                <h3 className="font-bold mb-2 text-lg text-orange-400">Planifier une expédition</h3>
+                <p className="text-sm text-orange-200/70 mb-4">
+                  Prêt à relever le défi ? Explorez notre simulateur d'expédition.
+                </p>
+                <Link href={`/expedition/${mountain.id}`}>
+                  <Button className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-400 font-semibold uppercase tracking-wider shadow-[0_0_20px_rgba(249,115,22,0.3)]">
+                    Simulateur d'expédition
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function StatsCard({
+  icon: Icon,
+  label,
+  value,
+  variant = "default",
+}: {
+  icon: any
+  label: string
+  value: string
+  variant?: "default" | "success" | "danger"
+}) {
+  const colorClasses = {
+    default: "text-orange-400 bg-orange-500/10",
+    success: "text-green-400 bg-green-500/10",
+    danger: "text-red-400 bg-red-500/10",
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      <Card className="border-orange-500/50 bg-black/60 backdrop-blur-md">
+        <CardContent className="pt-6">
+          <div className="flex items-center gap-3">
+            <div className={`p-3 rounded-lg ${colorClasses[variant]}`}>
+              <Icon className="h-5 w-5" />
+            </div>
+            <div>
+              <p className="text-xs text-orange-300/70 uppercase tracking-wider font-semibold">{label}</p>
+              <p className="text-2xl font-extrabold text-white">{value}</p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </motion.div>
+  )
+}

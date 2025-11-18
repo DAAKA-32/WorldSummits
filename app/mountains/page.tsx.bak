@@ -1,0 +1,231 @@
+"use client"
+
+import { useState, useMemo } from "react"
+import { getMountains } from "@/lib/mountains"
+import { MountainCard } from "@/components/mountain-card"
+import { Input } from "@/components/ui/input"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Badge } from "@/components/ui/badge"
+import { Search, Filter, X } from "lucide-react"
+import { motion } from "framer-motion"
+import { Continent, Difficulty } from "@/types/mountain"
+
+export default function MountainsPage() {
+  const mountains = getMountains()
+  const [searchQuery, setSearchQuery] = useState("")
+  const [selectedContinent, setSelectedContinent] = useState<string>("all")
+  const [selectedDifficulty, setSelectedDifficulty] = useState<string>("all")
+  const [sortBy, setSortBy] = useState<string>("altitude-desc")
+
+  // Get unique continents and difficulties
+  const continents = useMemo(() => {
+    return Array.from(new Set(mountains.map((m) => m.continent)))
+  }, [mountains])
+
+  const difficulties = useMemo(() => {
+    return Array.from(new Set(mountains.map((m) => m.expedition.difficulty)))
+  }, [mountains])
+
+  // Filter and sort mountains
+  const filteredMountains = useMemo(() => {
+    let filtered = mountains.filter((mountain) => {
+      const matchesSearch =
+        mountain.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        mountain.country.toLowerCase().includes(searchQuery.toLowerCase())
+
+      const matchesContinent =
+        selectedContinent === "all" || mountain.continent === selectedContinent
+
+      const matchesDifficulty =
+        selectedDifficulty === "all" ||
+        mountain.expedition.difficulty === selectedDifficulty
+
+      return matchesSearch && matchesContinent && matchesDifficulty
+    })
+
+    // Sort
+    filtered.sort((a, b) => {
+      switch (sortBy) {
+        case "altitude-desc":
+          return b.stats.altitude - a.stats.altitude
+        case "altitude-asc":
+          return a.stats.altitude - b.stats.altitude
+        case "name-asc":
+          return a.name.localeCompare(b.name)
+        case "name-desc":
+          return b.name.localeCompare(a.name)
+        case "death-rate-desc":
+          return b.stats.deathRate - a.stats.deathRate
+        case "death-rate-asc":
+          return a.stats.deathRate - b.stats.deathRate
+        default:
+          return 0
+      }
+    })
+
+    return filtered
+  }, [mountains, searchQuery, selectedContinent, selectedDifficulty, sortBy])
+
+  const clearFilters = () => {
+    setSearchQuery("")
+    setSelectedContinent("all")
+    setSelectedDifficulty("all")
+    setSortBy("altitude-desc")
+  }
+
+  const hasActiveFilters =
+    searchQuery || selectedContinent !== "all" || selectedDifficulty !== "all" || sortBy !== "altitude-desc"
+
+  return (
+    <div className="min-h-screen pt-20 pb-20 relative overflow-hidden bg-gradient-to-br from-black via-gray-950 to-black">
+      {/* Background Gradient Effect - Subtle */}
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/5 via-transparent to-blue-500/5 pointer-events-none" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center space-y-6 mb-16"
+        >
+          <div className="inline-block">
+            <Badge
+              variant="default"
+              className="bg-gradient-to-r from-cyan-600/80 to-cyan-500/80 text-white px-4 py-1.5 mb-6 font-semibold uppercase tracking-widest text-xs shadow-[0_0_15px_rgba(34,211,238,0.2)]"
+            >
+              Collection Premium
+            </Badge>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-cyan-400/80 via-blue-300/70 to-sky-400/80 bg-clip-text text-transparent leading-tight drop-shadow-[0_0_25px_rgba(34,211,238,0.25)]">
+            Toutes les <span className="bg-gradient-to-r from-sky-400/80 to-cyan-400/80 bg-clip-text text-transparent">Montagnes</span>
+          </h1>
+          <p className="text-xl text-cyan-100/60 max-w-3xl mx-auto leading-relaxed">
+            Explorez notre <span className="font-semibold text-cyan-200/80">collection exclusive</span> des plus hauts sommets du monde avec leurs <span className="font-semibold text-cyan-200/80">détails complets</span>
+          </p>
+        </motion.div>
+
+        {/* Filters - Modern Design */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="relative bg-black/60 border border-cyan-400/20 rounded-2xl p-8 mb-10 shadow-[0_0_30px_rgba(34,211,238,0.1)] backdrop-blur-md"
+        >
+          <div className="flex items-center gap-3 mb-6 relative z-10">
+            <div className="p-2 bg-cyan-500/15 rounded-lg border border-cyan-400/30">
+              <Filter className="h-5 w-5 text-cyan-300" />
+            </div>
+            <h2 className="text-xl font-bold tracking-tight text-cyan-300">Filtres et tri</h2>
+            {hasActiveFilters && (
+              <button
+                onClick={clearFilters}
+                className="ml-auto px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-cyan-600/80 to-cyan-500/80 hover:from-cyan-500/80 hover:to-cyan-400/80 border-0 rounded-lg flex items-center gap-2 transition-all shadow-[0_0_15px_rgba(34,211,238,0.2)]"
+              >
+                <X className="h-4 w-4" />
+                Réinitialiser
+              </button>
+            )}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 relative z-10">
+            {/* Search */}
+            <div className="relative group">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-cyan-300/70 group-focus-within:text-cyan-300 transition-colors" />
+              <Input
+                placeholder="Rechercher une montagne..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-12 h-12 bg-black/40 border-2 border-cyan-400/30 focus:border-cyan-400/50 text-white rounded-lg font-medium transition-all placeholder:text-cyan-300/50"
+              />
+            </div>
+
+            {/* Continent filter */}
+            <Select value={selectedContinent} onValueChange={setSelectedContinent}>
+              <SelectTrigger className="h-12 bg-black/40 border-2 border-cyan-400/30 focus:border-cyan-400/50 text-white rounded-lg font-medium">
+                <SelectValue placeholder="Continent" />
+              </SelectTrigger>
+              <SelectContent className="rounded-lg bg-black border-2 border-cyan-400/30">
+                <SelectItem value="all" className="text-white hover:bg-cyan-400/15">Tous les continents</SelectItem>
+                {continents.map((continent) => (
+                  <SelectItem key={continent} value={continent} className="text-white hover:bg-cyan-400/15">
+                    {continent}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+
+            {/* Difficulty filter */}
+            <Select value={selectedDifficulty} onValueChange={setSelectedDifficulty}>
+              <SelectTrigger className="h-12 bg-black/40 border-2 border-cyan-400/30 focus:border-cyan-400/50 text-white rounded-lg font-medium">
+                <SelectValue placeholder="Difficulté" />
+              </SelectTrigger>
+              <SelectContent className="rounded-lg bg-black border-2 border-cyan-400/30">
+                <SelectItem value="all" className="text-white hover:bg-cyan-400/15">Toutes difficultés</SelectItem>
+                {difficulties.map((difficulty) => (
+                  <SelectItem key={difficulty} value={difficulty} className="text-white hover:bg-cyan-400/15">
+                    {difficulty}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+
+            {/* Sort */}
+            <Select value={sortBy} onValueChange={setSortBy}>
+              <SelectTrigger className="h-12 bg-black/40 border-2 border-cyan-400/30 focus:border-cyan-400/50 text-white rounded-lg font-medium">
+                <SelectValue placeholder="Trier par" />
+              </SelectTrigger>
+              <SelectContent className="rounded-lg bg-black border-2 border-cyan-400/30">
+                <SelectItem value="altitude-desc" className="text-white hover:bg-cyan-400/15">Altitude (↓)</SelectItem>
+                <SelectItem value="altitude-asc" className="text-white hover:bg-cyan-400/15">Altitude (↑)</SelectItem>
+                <SelectItem value="name-asc" className="text-white hover:bg-cyan-400/15">Nom (A-Z)</SelectItem>
+                <SelectItem value="name-desc" className="text-white hover:bg-cyan-400/15">Nom (Z-A)</SelectItem>
+                <SelectItem value="death-rate-desc" className="text-white hover:bg-cyan-400/15">Dangerosité (↓)</SelectItem>
+                <SelectItem value="death-rate-asc" className="text-white hover:bg-cyan-400/15">Dangerosité (↑)</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </motion.div>
+
+        {/* Results count */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="flex items-center justify-between mb-8 px-2"
+        >
+          <div className="flex items-center gap-3">
+            <div className="h-1 w-12 bg-gradient-to-r from-cyan-400/70 to-transparent rounded-full shadow-lg shadow-cyan-400/20" />
+            <p className="text-base font-semibold text-cyan-200/80">
+              <span className="text-cyan-300 font-black text-lg">{filteredMountains.length}</span> montagne{filteredMountains.length > 1 ? "s" : ""} trouvée{filteredMountains.length > 1 ? "s" : ""}
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Mountains grid */}
+        {filteredMountains.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredMountains.map((mountain, index) => (
+              <MountainCard key={mountain.id} mountain={mountain} index={index} />
+            ))}
+          </div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center py-24"
+          >
+            <div className="inline-block p-6 bg-cyan-500/10 border border-cyan-400/20 rounded-2xl mb-4">
+              <Search className="h-16 w-16 text-cyan-300" />
+            </div>
+            <p className="text-xl font-medium text-white">
+              Aucune montagne ne correspond à vos critères
+            </p>
+            <p className="text-sm text-cyan-200/60 mt-2">
+              Essayez de modifier vos filtres
+            </p>
+          </motion.div>
+        )}
+      </div>
+    </div>
+  )
+}

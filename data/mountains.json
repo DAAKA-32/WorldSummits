@@ -1,0 +1,2535 @@
+[
+  {
+    "id": "everest",
+    "name": "Mount Everest",
+    "alternativeNames": [
+      "Sagarmatha",
+      "Chomolungma"
+    ],
+    "continent": "Asia",
+    "country": "Nepal/China",
+    "range": "Himalayas",
+    "stats": {
+      "altitude": 8849,
+      "prominence": 8849,
+      "deathRate": 3.1,
+      "successRate": 29.0,
+      "averageDuration": 60,
+      "firstAscentYear": 1953
+    },
+    "firstAscent": {
+      "date": "1953-05-29",
+      "climbers": [
+        {
+          "name": "Edmund Hillary",
+          "nationality": "New Zealand"
+        },
+        {
+          "name": "Tenzing Norgay",
+          "nationality": "Nepal"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Altitude sickness",
+      "Extreme weather",
+      "Frostbite",
+      "High winds"
+    ],
+    "description": "Mount Everest is Earth's highest mountain above sea level, located in the Mahalangur Himal sub-range of the Himalayas. The China–Nepal border runs across its summit point.",
+    "images": [
+      "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=1920",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1920"
+    ],
+    "expedition": {
+      "difficulty": "Extreme",
+      "bestSeasons": [
+        "Spring",
+        "Autumn"
+      ],
+      "estimatedBudget": {
+        "min": 30000,
+        "max": 85000,
+        "currency": "USD"
+      },
+      "requiredEquipment": [
+        "Oxygen tanks",
+        "Ice axe",
+        "Crampons",
+        "Down suit",
+        "Climbing rope"
+      ],
+      "recommendedDuration": 60
+    },
+    "coordinates": {
+      "latitude": 27.9881,
+      "longitude": 86.925
+    },
+    "facts": [
+      "Highest point on Earth at 8,849 meters",
+      "Over 300 people have died attempting to climb it",
+      "The summit temperature never rises above freezing"
+    ]
+  },
+  {
+    "id": "k2",
+    "name": "K2",
+    "alternativeNames": [
+      "Mount Godwin-Austen",
+      "Chhogori"
+    ],
+    "continent": "Asia",
+    "country": "Pakistan/China",
+    "range": "Karakoram",
+    "stats": {
+      "altitude": 8611,
+      "prominence": 4020,
+      "deathRate": 23.0,
+      "successRate": 10.0,
+      "averageDuration": 70,
+      "firstAscentYear": 1954
+    },
+    "firstAscent": {
+      "date": "1954-07-31",
+      "climbers": [
+        {
+          "name": "Achille Compagnoni",
+          "nationality": "Italy"
+        },
+        {
+          "name": "Lino Lacedelli",
+          "nationality": "Italy"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Altitude sickness",
+      "Extreme weather",
+      "Ice fall",
+      "High winds"
+    ],
+    "description": "K2, also known as Mount Godwin-Austen or Chhogori, is the second highest mountain in the world. It is more dangerous to climb than Everest.",
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1920",
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1920"
+    ],
+    "expedition": {
+      "difficulty": "Extreme",
+      "bestSeasons": [
+        "Summer"
+      ],
+      "estimatedBudget": {
+        "min": 25000,
+        "max": 70000,
+        "currency": "USD"
+      },
+      "requiredEquipment": [
+        "Oxygen tanks",
+        "Ice axe",
+        "Crampons",
+        "Technical climbing gear"
+      ],
+      "recommendedDuration": 70
+    },
+    "coordinates": {
+      "latitude": 35.8808,
+      "longitude": 76.5155
+    },
+    "facts": [
+      "Second highest mountain at 8,611 meters",
+      "Has never been climbed in winter until 2021",
+      "One person dies on K2 for every four who reach the summit"
+    ]
+  },
+  {
+    "id": "kangchenjunga",
+    "name": "Kangchenjunga",
+    "alternativeNames": [
+      "Kanchenjunga"
+    ],
+    "continent": "Asia",
+    "country": "Nepal/India",
+    "range": "Himalayas",
+    "stats": {
+      "altitude": 8586,
+      "prominence": 3922,
+      "deathRate": 14.1,
+      "successRate": 20.0,
+      "averageDuration": 55,
+      "firstAscentYear": 1955
+    },
+    "firstAscent": {
+      "date": "1955-05-25",
+      "climbers": [
+        {
+          "name": "Joe Brown",
+          "nationality": "UK"
+        },
+        {
+          "name": "George Band",
+          "nationality": "UK"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Altitude sickness",
+      "Extreme weather",
+      "Rockfall"
+    ],
+    "description": "Kangchenjunga is the third highest mountain in the world. Its name means 'The Five Treasures of Snows', referring to its five peaks.",
+    "images": [
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1920"
+    ],
+    "expedition": {
+      "difficulty": "Extreme",
+      "bestSeasons": [
+        "Spring",
+        "Autumn"
+      ],
+      "estimatedBudget": {
+        "min": 20000,
+        "max": 50000,
+        "currency": "USD"
+      },
+      "requiredEquipment": [
+        "Oxygen tanks",
+        "Ice axe",
+        "Crampons",
+        "Down suit"
+      ],
+      "recommendedDuration": 55
+    },
+    "coordinates": {
+      "latitude": 27.7025,
+      "longitude": 88.1475
+    },
+    "facts": [
+      "Third highest mountain at 8,586 meters",
+      "Sacred mountain - climbers traditionally stop short of the summit out of respect",
+      "Name means 'Five Treasures of Snows'"
+    ]
+  },
+  {
+    "id": "mont-blanc",
+    "name": "Mont Blanc",
+    "alternativeNames": ["Monte Bianco", "White Mountain"],
+    "continent": "Europe",
+    "country": "France/Italie",
+    "range": "Massif du Mont-Blanc",
+    "stats": {
+      "altitude": 4806,
+      "prominence": 4695,
+      "successRate": 70.5,
+      "deathRate": 2.1,
+      "averageClimbDuration": "2-3 jours"
+    },
+    "firstAscent": {
+      "date": "1786-08-08",
+      "climbers": [
+        {
+          "name": "Jacques Balmat",
+          "nationality": "France"
+        },
+        {
+          "name": "Michel Paccard",
+          "nationality": "France"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Crevasses",
+      "Sérac",
+      "Chutes de pierres",
+      "Conditions météo changeantes",
+      "Mal des montagnes"
+    ],
+    "description": "Le Mont Blanc, point culminant des Alpes avec ses 4806 mètres, est un sommet mythique de l'alpinisme. Première ascension en 1786, il marque le début de l'alpinisme moderne. Situé dans le massif du Mont-Blanc, à la frontière franco-italienne, il attire chaque année des milliers d'alpinistes venus du monde entier.",
+    "images": [
+      "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80",
+      "https://images.unsplash.com/photo-1605728894294-b36cd2965d0e?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Very Hard",
+      "technicalGrade": "PD+ / AD",
+      "physicalDemand": "Very High",
+      "bestSeasons": ["Summer", "Early Autumn"],
+      "estimatedCost": "1500-3000 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude"
+      ]
+    },
+    "coordinates": {
+      "latitude": 45.8326,
+      "longitude": 6.8652
+    },
+    "facts": [
+      "Point culminant des Alpes et d'Europe occidentale",
+      "Première ascension en 1786 marque la naissance de l'alpinisme moderne",
+      "Plus de 20 000 tentatives d'ascension par an",
+      "La voie normale passe par le refuge du Goûter"
+    ]
+  },
+  {
+    "id": "mont-blanc-de-courmayeur",
+    "name": "Mont Blanc de Courmayeur",
+    "alternativeNames": ["Pointe Helbronner"],
+    "continent": "Europe",
+    "country": "France/Italie",
+    "range": "Massif du Mont-Blanc",
+    "stats": {
+      "altitude": 4765,
+      "prominence": 45,
+      "successRate": 65.2,
+      "deathRate": 2.3,
+      "averageClimbDuration": "2-3 jours"
+    },
+    "firstAscent": {
+      "date": "1877-07-31",
+      "climbers": [
+        {
+          "name": "James Eccles",
+          "nationality": "United Kingdom"
+        },
+        {
+          "name": "Michel-Clément Payot",
+          "nationality": "France"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Crevasses",
+      "Sérac",
+      "Chutes de pierres",
+      "Conditions météo extrêmes"
+    ],
+    "description": "Le Mont Blanc de Courmayeur (4765m) est le second sommet du massif du Mont-Blanc. Souvent considéré comme le vrai sommet depuis le versant italien, il offre une ascension technique et exigeante. Première ascension réalisée en 1877 par James Eccles avec les guides Payot.",
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Extreme",
+      "technicalGrade": "AD / AD+",
+      "physicalDemand": "Extreme",
+      "bestSeasons": ["Summer", "Early Autumn"],
+      "estimatedCost": "2000-3500 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude"
+      ]
+    },
+    "coordinates": {
+      "latitude": 45.8289,
+      "longitude": 6.8694
+    },
+    "facts": [
+      "Second sommet du massif du Mont-Blanc",
+      "Considéré comme le vrai sommet du versant italien",
+      "Ascension plus technique que le Mont Blanc principal",
+      "Vue imprenable sur le versant italien"
+    ]
+  },
+  {
+    "id": "pointe-dufour",
+    "name": "Pointe Dufour",
+    "alternativeNames": ["Dufourspitze"],
+    "continent": "Europe",
+    "country": "Suisse",
+    "range": "Alpes pennines",
+    "stats": {
+      "altitude": 4634,
+      "prominence": 2165,
+      "successRate": 68.3,
+      "deathRate": 1.8,
+      "averageClimbDuration": "2 jours"
+    },
+    "firstAscent": {
+      "date": "1855-08-01",
+      "climbers": [
+        {
+          "name": "Charles Hudson",
+          "nationality": "United Kingdom"
+        },
+        {
+          "name": "Ulrich Lauener",
+          "nationality": "Switzerland"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Crevasses",
+      "Chutes de pierres",
+      "Arêtes exposées",
+      "Foudre en été"
+    ],
+    "description": "La Pointe Dufour (4634m) est le point culminant de la Suisse et du massif du Mont Rose. Point le plus élevé des Alpes pennines, c'est un sommet majestueux qui offre une vue panoramique exceptionnelle. Première ascension en 1855 par l'expédition britannique menée par Charles Hudson.",
+    "images": [
+      "https://images.unsplash.com/photo-1605728894294-b36cd2965d0e?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Very Hard",
+      "technicalGrade": "PD+ / AD",
+      "physicalDemand": "Very High",
+      "bestSeasons": ["Summer", "Early Autumn"],
+      "estimatedCost": "1800-3200 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude"
+      ]
+    },
+    "coordinates": {
+      "latitude": 45.9369,
+      "longitude": 7.8678
+    },
+    "facts": [
+      "Point culminant de la Suisse",
+      "Fait partie du massif du Mont Rose",
+      "Vue panoramique sur 14 sommets de 4000m",
+      "Glacier imposant sur le versant nord"
+    ]
+  },
+  {
+    "id": "nordend",
+    "name": "Nordend",
+    "alternativeNames": ["Punta Nordend"],
+    "continent": "Europe",
+    "country": "Suisse/Italie",
+    "range": "Alpes pennines",
+    "stats": {
+      "altitude": 4610,
+      "prominence": 84,
+      "successRate": 62.7,
+      "deathRate": 2.0,
+      "averageClimbDuration": "2 jours"
+    },
+    "firstAscent": {
+      "date": "1861-08-26",
+      "climbers": [
+        {
+          "name": "T.F. Buxton",
+          "nationality": "United Kingdom"
+        },
+        {
+          "name": "Edward N. Buxton",
+          "nationality": "United Kingdom"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Crevasses",
+      "Chutes de pierres",
+      "Arêtes exposées",
+      "Conditions météo extrêmes"
+    ],
+    "description": "Le Nordend (4610m) est le quatrième plus haut sommet des Alpes, situé dans le massif du Mont Rose aux Alpes pennines. Son nom signifie 'extrémité nord' en allemand. C'est un sommet technique offrant une ascension exigeante avec des passages d'arêtes exposées.",
+    "images": [
+      "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Extreme",
+      "technicalGrade": "AD / AD+",
+      "physicalDemand": "Extreme",
+      "bestSeasons": ["Summer", "Early Autumn"],
+      "estimatedCost": "2000-3500 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude"
+      ]
+    },
+    "coordinates": {
+      "latitude": 45.9417,
+      "longitude": 7.8700
+    },
+    "facts": [
+      "Quatrième plus haut sommet des Alpes",
+      "Partie du massif du Mont Rose",
+      "Ascension technique avec arêtes exposées",
+      "Vue spectaculaire sur les glaciers environnants"
+    ]
+  },
+  {
+    "id": "pointe-zumstein",
+    "name": "Pointe Zumstein",
+    "alternativeNames": ["Punta Zumstein"],
+    "continent": "Europe",
+    "country": "Suisse/Italie",
+    "range": "Alpes pennines",
+    "stats": {
+      "altitude": 4563,
+      "prominence": 62,
+      "successRate": 66.8,
+      "deathRate": 1.7,
+      "averageClimbDuration": "2 jours"
+    },
+    "firstAscent": {
+      "date": "1820-08-01",
+      "climbers": [
+        {
+          "name": "Joseph Zumstein",
+          "nationality": "Switzerland"
+        },
+        {
+          "name": "Joseph Molinatti",
+          "nationality": "Italy"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Crevasses",
+      "Chutes de pierres",
+      "Sérac",
+      "Foudre en été"
+    ],
+    "description": "La Pointe Zumstein (4563m) fait partie du massif du Mont Rose dans les Alpes pennines. Elle porte le nom de Joseph Zumstein qui réalisa sa première ascension en 1820, l'une des premières conquêtes des sommets de 4000m des Alpes. C'est un sommet glaciaire offrant une belle course d'altitude.",
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Very Hard",
+      "technicalGrade": "PD+ / AD",
+      "physicalDemand": "Very High",
+      "bestSeasons": ["Summer", "Early Autumn"],
+      "estimatedCost": "1800-3200 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude"
+      ]
+    },
+    "coordinates": {
+      "latitude": 45.9319,
+      "longitude": 7.8714
+    },
+    "facts": [
+      "Une des premières ascensions de 4000m des Alpes (1820)",
+      "Nommée d'après son premier ascensionniste",
+      "Partie de la chaîne du Mont Rose",
+      "Belle course glaciaire d'altitude"
+    ]
+  },
+  {
+    "id": "pointe-gnifetti",
+    "name": "Pointe Gnifetti",
+    "alternativeNames": ["Signalkuppe", "Punta Gnifetti"],
+    "continent": "Europe",
+    "country": "Suisse/Italie",
+    "range": "Alpes pennines",
+    "stats": {
+      "altitude": 4554,
+      "prominence": 104,
+      "successRate": 71.2,
+      "deathRate": 1.5,
+      "averageClimbDuration": "1-2 jours"
+    },
+    "firstAscent": {
+      "date": "1842-08-09",
+      "climbers": [
+        {
+          "name": "Giovanni Gnifetti",
+          "nationality": "Italy"
+        },
+        {
+          "name": "Giuseppe Farinetti",
+          "nationality": "Italy"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Crevasses",
+      "Chutes de pierres",
+      "Mal des montagnes",
+      "Conditions météo changeantes"
+    ],
+    "description": "La Pointe Gnifetti (4554m), aussi appelée Signalkuppe, est célèbre pour accueillir la Capanna Margherita, le refuge le plus haut d'Europe à 4554m. Située dans le massif du Mont Rose, elle offre une ascension relativement accessible pour un sommet de 4000m.",
+    "images": [
+      "https://images.unsplash.com/photo-1605728894294-b36cd2965d0e?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Very Hard",
+      "technicalGrade": "PD / PD+",
+      "physicalDemand": "High",
+      "bestSeasons": ["Summer", "Early Autumn"],
+      "estimatedCost": "1500-2800 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude"
+      ]
+    },
+    "coordinates": {
+      "latitude": 45.9272,
+      "longitude": 7.8769
+    },
+    "facts": [
+      "Abrite le refuge le plus haut d'Europe (Capanna Margherita)",
+      "Ascension relativement accessible pour un 4000m",
+      "Point de vue exceptionnel sur les Alpes",
+      "Station météorologique en altitude"
+    ]
+  },
+  {
+    "id": "dom-des-mischabel",
+    "name": "Dom des Mischabel",
+    "alternativeNames": ["Dom", "Mischabelhorn"],
+    "continent": "Europe",
+    "country": "Suisse",
+    "range": "Alpes pennines",
+    "stats": {
+      "altitude": 4545,
+      "prominence": 1046,
+      "successRate": 64.5,
+      "deathRate": 1.9,
+      "averageClimbDuration": "2 jours"
+    },
+    "firstAscent": {
+      "date": "1858-09-11",
+      "climbers": [
+        {
+          "name": "L. Davies",
+          "nationality": "United Kingdom"
+        },
+        {
+          "name": "Johann Zumtaugwald",
+          "nationality": "Switzerland"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Arêtes exposées",
+      "Crevasses",
+      "Chutes de pierres",
+      "Foudre en été"
+    ],
+    "description": "Le Dom (4545m) est le plus haut sommet entièrement situé en Suisse et le troisième plus haut des Alpes. Situé dans la chaîne des Mischabel, c'est un sommet majestueux offrant une ascension technique et exigeante avec de belles arêtes rocheuses.",
+    "images": [
+      "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Very Hard",
+      "technicalGrade": "AD / AD+",
+      "physicalDemand": "Very High",
+      "bestSeasons": ["Summer", "Early Autumn"],
+      "estimatedCost": "2000-3500 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude"
+      ]
+    },
+    "coordinates": {
+      "latitude": 46.0978,
+      "longitude": 7.8600
+    },
+    "facts": [
+      "Plus haut sommet entièrement suisse",
+      "Troisième plus haut sommet des Alpes",
+      "Partie de la chaîne des Mischabel",
+      "Belle combinaison de rocher et de glace"
+    ]
+  },
+  {
+    "id": "liskamm-oriental",
+    "name": "Liskamm Oriental",
+    "alternativeNames": ["Liskamm Est", "Liskamm Orientale"],
+    "continent": "Europe",
+    "country": "Suisse/Italie",
+    "range": "Alpes pennines",
+    "stats": {
+      "altitude": 4533,
+      "prominence": 376,
+      "successRate": 58.3,
+      "deathRate": 2.4,
+      "averageClimbDuration": "2 jours"
+    },
+    "firstAscent": {
+      "date": "1861-08-19",
+      "climbers": [
+        {
+          "name": "William Edward Hall",
+          "nationality": "United Kingdom"
+        },
+        {
+          "name": "John Hardy",
+          "nationality": "United Kingdom"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Crevasses",
+      "Sérac",
+      "Arêtes exposées",
+      "Corniche instables"
+    ],
+    "description": "Le Liskamm Oriental (4533m) est surnommé le 'mangeur d'hommes' en raison de ses avalanches fréquentes et de ses corniches instables. C'est l'un des sommets les plus dangereux des Alpes, offrant une arête sommitale spectaculaire mais périlleuse.",
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Extreme",
+      "technicalGrade": "AD+ / D",
+      "physicalDemand": "Extreme",
+      "bestSeasons": ["Summer"],
+      "estimatedCost": "2500-4000 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude"
+      ]
+    },
+    "coordinates": {
+      "latitude": 45.9225,
+      "longitude": 7.8356
+    },
+    "facts": [
+      "Surnommé le 'mangeur d'hommes'",
+      "Un des sommets les plus dangereux des Alpes",
+      "Arête sommitale spectaculaire",
+      "Corniches de neige instables"
+    ]
+  },
+  {
+    "id": "weisshorn",
+    "name": "Weisshorn",
+    "alternativeNames": ["Pointe Blanche"],
+    "continent": "Europe",
+    "country": "Suisse",
+    "range": "Alpes pennines",
+    "stats": {
+      "altitude": 4506,
+      "prominence": 1235,
+      "successRate": 61.8,
+      "deathRate": 2.1,
+      "averageClimbDuration": "2-3 jours"
+    },
+    "firstAscent": {
+      "date": "1861-08-19",
+      "climbers": [
+        {
+          "name": "John Tyndall",
+          "nationality": "United Kingdom"
+        },
+        {
+          "name": "Johann Joseph Bennen",
+          "nationality": "Switzerland"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Arêtes exposées",
+      "Crevasses",
+      "Chutes de pierres",
+      "Foudre en été"
+    ],
+    "description": "Le Weisshorn (4506m) est considéré comme l'un des plus beaux sommets des Alpes avec sa forme pyramidale parfaite. Situé dans les Alpes pennines, il offre une ascension technique et esthétique, avec une arête nord-est particulièrement spectaculaire.",
+    "images": [
+      "https://images.unsplash.com/photo-1605728894294-b36cd2965d0e?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Extreme",
+      "technicalGrade": "AD+ / D",
+      "physicalDemand": "Extreme",
+      "bestSeasons": ["Summer", "Early Autumn"],
+      "estimatedCost": "2500-4000 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude"
+      ]
+    },
+    "coordinates": {
+      "latitude": 46.1014,
+      "longitude": 7.7161
+    },
+    "facts": [
+      "Un des plus beaux sommets des Alpes",
+      "Forme pyramidale parfaite",
+      "Arête nord-est spectaculaire",
+      "Vue panoramique exceptionnelle"
+    ]
+  },
+  {
+    "id": "taschhorn",
+    "name": "Täschhorn",
+    "alternativeNames": ["Tête de Täsch"],
+    "continent": "Europe",
+    "country": "Suisse",
+    "range": "Alpes pennines",
+    "stats": {
+      "altitude": 4491,
+      "prominence": 209,
+      "successRate": 63.2,
+      "deathRate": 1.9,
+      "averageClimbDuration": "2 jours"
+    },
+    "firstAscent": {
+      "date": "1862-07-31",
+      "climbers": [
+        {
+          "name": "Llewelyn Davies",
+          "nationality": "United Kingdom"
+        },
+        {
+          "name": "J.H. Hayward",
+          "nationality": "United Kingdom"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Arêtes exposées",
+      "Crevasses",
+      "Chutes de pierres",
+      "Foudre en été"
+    ],
+    "description": "Le Täschhorn (4491m) est un sommet imposant de la chaîne des Mischabel dans les Alpes pennines. Moins connu que ses voisins, il offre néanmoins une ascension technique et gratifiante avec de belles voies d'approche glaciaires.",
+    "images": [
+      "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Very Hard",
+      "technicalGrade": "AD / AD+",
+      "physicalDemand": "Very High",
+      "bestSeasons": ["Summer", "Early Autumn"],
+      "estimatedCost": "2000-3500 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude"
+      ]
+    },
+    "coordinates": {
+      "latitude": 46.0836,
+      "longitude": 7.8572
+    },
+    "facts": [
+      "Partie de la chaîne des Mischabel",
+      "Sommet imposant et technique",
+      "Moins fréquenté que ses voisins",
+      "Belle approche glaciaire"
+    ]
+  },
+  {
+    "id": "liskamm-occidental",
+    "name": "Liskamm Occidental",
+    "alternativeNames": ["Liskamm Ouest", "Liskamm Occidentale"],
+    "continent": "Europe",
+    "country": "Suisse/Italie",
+    "range": "Alpes pennines",
+    "stats": {
+      "altitude": 4481,
+      "prominence": 61,
+      "successRate": 57.5,
+      "deathRate": 2.5,
+      "averageClimbDuration": "2 jours"
+    },
+    "firstAscent": {
+      "date": "1864-08-16",
+      "climbers": [
+        {
+          "name": "Leslie Stephen",
+          "nationality": "United Kingdom"
+        },
+        {
+          "name": "E.N. Buxton",
+          "nationality": "United Kingdom"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Crevasses",
+      "Sérac",
+      "Arêtes exposées",
+      "Corniche instables"
+    ],
+    "description": "Le Liskamm Occidental (4481m) partage avec son voisin oriental la réputation de 'mangeur d'hommes'. L'arête qui relie les deux sommets est l'une des plus spectaculaires et dangereuses des Alpes, avec des corniches de neige impressionnantes.",
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Extreme",
+      "technicalGrade": "AD+ / D",
+      "physicalDemand": "Extreme",
+      "bestSeasons": ["Summer"],
+      "estimatedCost": "2500-4000 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude"
+      ]
+    },
+    "coordinates": {
+      "latitude": 45.9269,
+      "longitude": 7.8208
+    },
+    "facts": [
+      "Réputation de 'mangeur d'hommes'",
+      "Arête sommitale spectaculaire reliant les deux Liskamm",
+      "Un des sommets les plus dangereux",
+      "Corniches impressionnantes"
+    ]
+  },
+  {
+    "id": "cervin",
+    "name": "Cervin",
+    "alternativeNames": ["Matterhorn", "Monte Cervino"],
+    "continent": "Europe",
+    "country": "Suisse/Italie",
+    "range": "Alpes pennines",
+    "stats": {
+      "altitude": 4478,
+      "prominence": 1040,
+      "successRate": 55.8,
+      "deathRate": 3.2,
+      "averageClimbDuration": "2-3 jours"
+    },
+    "firstAscent": {
+      "date": "1865-07-14",
+      "climbers": [
+        {
+          "name": "Edward Whymper",
+          "nationality": "United Kingdom"
+        },
+        {
+          "name": "Charles Hudson",
+          "nationality": "United Kingdom"
+        },
+        {
+          "name": "Michel Croz",
+          "nationality": "France"
+        }
+      ]
+    },
+    "dangers": [
+      "Chutes de pierres",
+      "Arêtes exposées",
+      "Crevasses",
+      "Conditions météo changeantes",
+      "Passages d'escalade délicats",
+      "Trafic sur la voie normale"
+    ],
+    "description": "Le Cervin (4478m), aussi appelé Matterhorn, est sans doute le sommet le plus emblématique des Alpes. Sa forme pyramidale caractéristique en fait un symbole universel de la montagne. L'ascension de 1865 par Edward Whymper, tragique avec 4 morts à la descente, reste gravée dans l'histoire de l'alpinisme.",
+    "images": [
+      "https://images.unsplash.com/photo-1531368319615-a7bd55d17dd8?w=800&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Extreme",
+      "technicalGrade": "AD+ / D-",
+      "physicalDemand": "Extreme",
+      "bestSeasons": ["Summer", "Early Autumn"],
+      "estimatedCost": "2500-4500 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude",
+        "Matériel d'escalade"
+      ]
+    },
+    "coordinates": {
+      "latitude": 45.9764,
+      "longitude": 7.6586
+    },
+    "facts": [
+      "Sommet le plus emblématique des Alpes",
+      "Forme pyramidale caractéristique",
+      "Première ascension tragique en 1865",
+      "Plus de 500 morts depuis la première ascension",
+      "Logo de la marque Toblerone"
+    ]
+  },
+  {
+    "id": "pointe-louis-amedee",
+    "name": "Pointe Louis-Amédée",
+    "alternativeNames": ["Pic Luigi Amedeo"],
+    "continent": "Europe",
+    "country": "Italie",
+    "range": "Massif du Mont-Blanc",
+    "stats": {
+      "altitude": 4470,
+      "prominence": 10,
+      "successRate": 64.2,
+      "deathRate": 2.0,
+      "averageClimbDuration": "2 jours"
+    },
+    "firstAscent": {
+      "date": "1901-07-20",
+      "climbers": [
+        {
+          "name": "G.B. Gugliermina",
+          "nationality": "Italy"
+        },
+        {
+          "name": "Joseph Brocherel",
+          "nationality": "Italy"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Crevasses",
+      "Sérac",
+      "Chutes de pierres",
+      "Conditions météo changeantes"
+    ],
+    "description": "La Pointe Louis-Amédée (4470m) est un sommet du massif du Mont-Blanc, situé sur l'arête reliant le Mont Blanc au Mont Blanc de Courmayeur. Nommée en l'honneur du Duc des Abruzzes Louis-Amédée de Savoie, explorateur et alpiniste italien.",
+    "images": [
+      "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Very Hard",
+      "technicalGrade": "AD / AD+",
+      "physicalDemand": "Very High",
+      "bestSeasons": ["Summer", "Early Autumn"],
+      "estimatedCost": "2000-3500 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude"
+      ]
+    },
+    "coordinates": {
+      "latitude": 45.8219,
+      "longitude": 6.8653
+    },
+    "facts": [
+      "Nommée d'après le Duc des Abruzzes",
+      "Sur l'arête du Mont Blanc",
+      "Belle course d'arête",
+      "Vue imprenable sur le massif"
+    ]
+  },
+  {
+    "id": "mont-maudit",
+    "name": "Mont Maudit",
+    "alternativeNames": ["Monte Maledetto", "Cursed Mountain"],
+    "continent": "Europe",
+    "country": "France/Italie",
+    "range": "Massif du Mont-Blanc",
+    "stats": {
+      "altitude": 4468,
+      "prominence": 68,
+      "successRate": 67.3,
+      "deathRate": 2.2,
+      "averageClimbDuration": "2 jours"
+    },
+    "firstAscent": {
+      "date": "1878-09-12",
+      "climbers": [
+        {
+          "name": "Henry Seymour Hoare",
+          "nationality": "United Kingdom"
+        },
+        {
+          "name": "William Edward Davidson",
+          "nationality": "United Kingdom"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Crevasses",
+      "Sérac",
+      "Chutes de pierres",
+      "Conditions météo changeantes"
+    ],
+    "description": "Le Mont Maudit (4468m), ou 'Montagne Maudite', est situé entre le Mont Blanc et le Mont Blanc du Tacul dans le massif du Mont-Blanc. Son nom sinistre provient des nombreux accidents survenus sur ses pentes. C'est une étape clé de la traversée classique des Trois Monts.",
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Very Hard",
+      "technicalGrade": "AD / AD+",
+      "physicalDemand": "Very High",
+      "bestSeasons": ["Summer", "Early Autumn"],
+      "estimatedCost": "1800-3200 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude"
+      ]
+    },
+    "coordinates": {
+      "latitude": 45.8478,
+      "longitude": 6.8758
+    },
+    "facts": [
+      "Signifie 'Montagne Maudite'",
+      "Étape de la traversée des Trois Monts",
+      "Entre Mont Blanc et Mont Blanc du Tacul",
+      "Nombreux accidents historiques"
+    ]
+  },
+  {
+    "id": "pointe-parrot",
+    "name": "Pointe Parrot",
+    "alternativeNames": ["Punta Parrot"],
+    "continent": "Europe",
+    "country": "Suisse/Italie",
+    "range": "Alpes pennines",
+    "stats": {
+      "altitude": 4436,
+      "prominence": 29,
+      "successRate": 69.5,
+      "deathRate": 1.6,
+      "averageClimbDuration": "1-2 jours"
+    },
+    "firstAscent": {
+      "date": "1863-08-16",
+      "climbers": [
+        {
+          "name": "Reginald S. Macdonald",
+          "nationality": "United Kingdom"
+        },
+        {
+          "name": "Florence Crauford Grove",
+          "nationality": "United Kingdom"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Crevasses",
+      "Chutes de pierres",
+      "Sérac",
+      "Foudre en été"
+    ],
+    "description": "La Pointe Parrot (4436m) fait partie du massif du Mont Rose dans les Alpes pennines. Nommée d'après le Dr. Johann Jakob Friedrich Wilhelm Parrot, botaniste et explorateur allemand. C'est un sommet glaciaire accessible offrant une belle course d'altitude.",
+    "images": [
+      "https://images.unsplash.com/photo-1605728894294-b36cd2965d0e?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Very Hard",
+      "technicalGrade": "PD+ / AD",
+      "physicalDemand": "High",
+      "bestSeasons": ["Summer", "Early Autumn"],
+      "estimatedCost": "1600-3000 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude"
+      ]
+    },
+    "coordinates": {
+      "latitude": 45.9197,
+      "longitude": 7.8714
+    },
+    "facts": [
+      "Partie du massif du Mont Rose",
+      "Nommée d'après un botaniste allemand",
+      "Course glaciaire accessible",
+      "Proche de la Capanna Margherita"
+    ]
+  },
+  {
+    "id": "dent-blanche",
+    "name": "Dent Blanche",
+    "alternativeNames": ["Dente Bianca"],
+    "continent": "Europe",
+    "country": "Suisse",
+    "range": "Alpes pennines",
+    "stats": {
+      "altitude": 4358,
+      "prominence": 898,
+      "successRate": 60.2,
+      "deathRate": 2.3,
+      "averageClimbDuration": "2-3 jours"
+    },
+    "firstAscent": {
+      "date": "1862-07-18",
+      "climbers": [
+        {
+          "name": "William Wigram",
+          "nationality": "United Kingdom"
+        },
+        {
+          "name": "Thomas Stuart Kennedy",
+          "nationality": "United Kingdom"
+        }
+      ]
+    },
+    "dangers": [
+      "Arêtes exposées",
+      "Chutes de pierres",
+      "Crevasses",
+      "Passages d'escalade délicats",
+      "Foudre en été"
+    ],
+    "description": "La Dent Blanche (4358m) est l'un des sommets les plus élégants des Alpes pennines. Sa forme pyramidale et son arête sud spectaculaire en font un objectif prisé des alpinistes expérimentés. L'ascension combine escalade rocheuse et passages glaciaires.",
+    "images": [
+      "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Extreme",
+      "technicalGrade": "AD+ / D",
+      "physicalDemand": "Extreme",
+      "bestSeasons": ["Summer", "Early Autumn"],
+      "estimatedCost": "2500-4000 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude",
+        "Matériel d'escalade"
+      ]
+    },
+    "coordinates": {
+      "latitude": 46.0342,
+      "longitude": 7.6119
+    },
+    "facts": [
+      "Un des sommets les plus élégants des Alpes",
+      "Arête sud spectaculaire",
+      "Combinaison de rocher et de glace",
+      "Vue panoramique sur le Cervin"
+    ]
+  },
+  {
+    "id": "ludwigshohe",
+    "name": "Ludwigshöhe",
+    "alternativeNames": ["Punta Ludovica"],
+    "continent": "Europe",
+    "country": "Suisse/Italie",
+    "range": "Alpes pennines",
+    "stats": {
+      "altitude": 4342,
+      "prominence": 37,
+      "successRate": 68.7,
+      "deathRate": 1.7,
+      "averageClimbDuration": "1-2 jours"
+    },
+    "firstAscent": {
+      "date": "1822-08-25",
+      "climbers": [
+        {
+          "name": "Franz Ludwig von Welden",
+          "nationality": "Austria"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Crevasses",
+      "Chutes de pierres",
+      "Sérac",
+      "Foudre en été"
+    ],
+    "description": "La Ludwigshöhe (4342m) fait partie du massif du Mont Rose dans les Alpes pennines. Nommée d'après son premier ascensionniste, le général autrichien Franz Ludwig von Welden. C'est une course glaciaire classique offrant une belle ascension d'altitude.",
+    "images": [
+      "https://images.unsplash.com/photo-1605728894294-b36cd2965d0e?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Hard",
+      "technicalGrade": "PD+ / AD",
+      "physicalDemand": "High",
+      "bestSeasons": ["Summer", "Early Autumn"],
+      "estimatedCost": "1600-3000 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude"
+      ]
+    },
+    "coordinates": {
+      "latitude": 45.9167,
+      "longitude": 7.8639
+    },
+    "facts": [
+      "Partie du massif du Mont Rose",
+      "Une des premières ascensions de 4000m (1822)",
+      "Nommée d'après un général autrichien",
+      "Course glaciaire classique"
+    ]
+  },
+  {
+    "id": "nadelhorn",
+    "name": "Nadelhorn",
+    "alternativeNames": ["Pointe de l'Aiguille"],
+    "continent": "Europe",
+    "country": "Suisse",
+    "range": "Alpes pennines",
+    "stats": {
+      "altitude": 4327,
+      "prominence": 209,
+      "successRate": 65.8,
+      "deathRate": 1.8,
+      "averageClimbDuration": "2 jours"
+    },
+    "firstAscent": {
+      "date": "1858-09-16",
+      "climbers": [
+        {
+          "name": "Franz Andenmatten",
+          "nationality": "Switzerland"
+        },
+        {
+          "name": "Baptiste Epiney",
+          "nationality": "Switzerland"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Arêtes exposées",
+      "Crevasses",
+      "Chutes de pierres",
+      "Foudre en été"
+    ],
+    "description": "Le Nadelhorn (4327m) est le sommet principal de la chaîne de Nadelgrat dans les Alpes pennines. Son nom signifie 'corne d'aiguille' en allemand. C'est un sommet technique offrant une belle ascension avec des passages d'arêtes caractéristiques.",
+    "images": [
+      "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Very Hard",
+      "technicalGrade": "AD / AD+",
+      "physicalDemand": "Very High",
+      "bestSeasons": ["Summer", "Early Autumn"],
+      "estimatedCost": "2000-3500 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude"
+      ]
+    },
+    "coordinates": {
+      "latitude": 46.1089,
+      "longitude": 7.8639
+    },
+    "facts": [
+      "Sommet principal du Nadelgrat",
+      "Signifie 'corne d'aiguille'",
+      "Belle ascension technique",
+      "Passages d'arêtes caractéristiques"
+    ]
+  },
+  {
+    "id": "tete-noire",
+    "name": "Tête Noire",
+    "alternativeNames": ["Schwarzhaupt"],
+    "continent": "Europe",
+    "country": "Italie",
+    "range": "Alpes pennines",
+    "stats": {
+      "altitude": 4322,
+      "prominence": 24,
+      "successRate": 67.2,
+      "deathRate": 1.7,
+      "averageClimbDuration": "1-2 jours"
+    },
+    "firstAscent": {
+      "date": "1873-08-18",
+      "climbers": [
+        {
+          "name": "Marco Maglionini",
+          "nationality": "Italy"
+        },
+        {
+          "name": "Albert de Rothschild",
+          "nationality": "Austria"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Crevasses",
+      "Chutes de pierres",
+      "Sérac",
+      "Foudre en été"
+    ],
+    "description": "La Tête Noire (4322m) est un sommet du massif du Mont Rose dans les Alpes pennines. Contrairement à son nom, c'est un sommet glaciaire blanc offrant une ascension relativement accessible pour un sommet de 4000m.",
+    "images": [
+      "https://images.unsplash.com/photo-1605728894294-b36cd2965d0e?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Hard",
+      "technicalGrade": "PD+ / AD",
+      "physicalDemand": "High",
+      "bestSeasons": ["Summer", "Early Autumn"],
+      "estimatedCost": "1600-3000 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude"
+      ]
+    },
+    "coordinates": {
+      "latitude": 45.9150,
+      "longitude": 7.8619
+    },
+    "facts": [
+      "Partie du massif du Mont Rose",
+      "Sommet glaciaire malgré son nom",
+      "Ascension relativement accessible",
+      "Proche des autres 4000m du Mont Rose"
+    ]
+  },
+  {
+    "id": "grand-combin-de-grafeneire",
+    "name": "Grand Combin de Grafeneire",
+    "alternativeNames": ["Grand Combin"],
+    "continent": "Europe",
+    "country": "Suisse",
+    "range": "Alpes pennines",
+    "stats": {
+      "altitude": 4314,
+      "prominence": 1517,
+      "successRate": 63.5,
+      "deathRate": 2.0,
+      "averageClimbDuration": "2-3 jours"
+    },
+    "firstAscent": {
+      "date": "1859-07-30",
+      "climbers": [
+        {
+          "name": "C. Sainte Claire de Ville",
+          "nationality": "France"
+        },
+        {
+          "name": "Daniel Ballays",
+          "nationality": "Switzerland"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Crevasses",
+      "Sérac",
+      "Chutes de pierres",
+      "Conditions météo changeantes"
+    ],
+    "description": "Le Grand Combin de Grafeneire (4314m) est le point culminant du massif du Grand Combin dans les Alpes pennines. C'est un sommet majestueux avec de vastes glaciers suspendus. L'ascension offre une belle course glaciaire avec des paysages spectaculaires.",
+    "images": [
+      "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&q=80"
+    ],
+    "expedition": {
+      "difficulty": "Very Hard",
+      "technicalGrade": "AD / AD+",
+      "physicalDemand": "Very High",
+      "bestSeasons": ["Summer", "Early Autumn"],
+      "estimatedCost": "2000-3500 EUR",
+      "requiredEquipment": [
+        "Crampons",
+        "Piolet",
+        "Baudrier",
+        "Cordes",
+        "Casque",
+        "Vêtements haute altitude"
+      ]
+    },
+    "coordinates": {
+      "latitude": 45.9375,
+      "longitude": 7.2992
+    },
+    "facts": [
+      "Point culminant du massif du Grand Combin",
+      "Vastes glaciers suspendus",
+      "Belle course glaciaire",
+      "Paysages spectaculaires"
+    ]
+  },
+  {
+    "id": "elbrus",
+    "name": "Mount Elbrus",
+    "alternativeNames": [
+      "Elbrus"
+    ],
+    "continent": "Europe",
+    "country": "Russia",
+    "range": "Caucasus",
+    "stats": {
+      "altitude": 5642,
+      "prominence": 4741,
+      "deathRate": 0.8,
+      "successRate": 80.0,
+      "averageDuration": 10,
+      "firstAscentYear": 1874
+    },
+    "firstAscent": {
+      "date": "1874-07-31",
+      "climbers": [
+        {
+          "name": "Florence Crauford Grove",
+          "nationality": "UK"
+        }
+      ]
+    },
+    "dangers": [
+      "Altitude sickness",
+      "Extreme weather",
+      "Frostbite"
+    ],
+    "description": "Mount Elbrus is the highest mountain in Europe and one of the Seven Summits. It is a dormant volcano with two summits.",
+    "images": [
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1920"
+    ],
+    "expedition": {
+      "difficulty": "Moderate",
+      "bestSeasons": [
+        "Summer"
+      ],
+      "estimatedBudget": {
+        "min": 1500,
+        "max": 4000,
+        "currency": "USD"
+      },
+      "requiredEquipment": [
+        "Ice axe",
+        "Crampons",
+        "Down jacket"
+      ],
+      "recommendedDuration": 10
+    },
+    "coordinates": {
+      "latitude": 43.3499,
+      "longitude": 42.4453
+    },
+    "facts": [
+      "Highest mountain in Europe at 5,642 meters",
+      "One of the Seven Summits",
+      "Dormant volcano with twin summits"
+    ]
+  },
+  {
+    "id": "denali",
+    "name": "Denali",
+    "alternativeNames": [
+      "Mount McKinley"
+    ],
+    "continent": "North America",
+    "country": "United States",
+    "range": "Alaska Range",
+    "stats": {
+      "altitude": 6190,
+      "prominence": 6140,
+      "deathRate": 3.0,
+      "successRate": 50.0,
+      "averageDuration": 21,
+      "firstAscentYear": 1913
+    },
+    "firstAscent": {
+      "date": "1913-06-07",
+      "climbers": [
+        {
+          "name": "Hudson Stuck",
+          "nationality": "USA"
+        },
+        {
+          "name": "Harry Karstens",
+          "nationality": "USA"
+        }
+      ]
+    },
+    "dangers": [
+      "Altitude sickness",
+      "Extreme weather",
+      "Frostbite",
+      "High winds"
+    ],
+    "description": "Denali is the highest mountain peak in North America. Its extreme northern location makes it one of the coldest mountains to climb.",
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1920",
+      "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=1920"
+    ],
+    "expedition": {
+      "difficulty": "Extreme",
+      "bestSeasons": [
+        "Spring",
+        "Summer"
+      ],
+      "estimatedBudget": {
+        "min": 8000,
+        "max": 15000,
+        "currency": "USD"
+      },
+      "requiredEquipment": [
+        "Ice axe",
+        "Crampons",
+        "Extreme cold gear",
+        "Sled"
+      ],
+      "recommendedDuration": 21
+    },
+    "coordinates": {
+      "latitude": 63.0692,
+      "longitude": -151.007
+    },
+    "facts": [
+      "Highest mountain in North America at 6,190 meters",
+      "One of the coldest mountains on Earth",
+      "Previously known as Mount McKinley"
+    ]
+  },
+  {
+    "id": "aconcagua",
+    "name": "Aconcagua",
+    "alternativeNames": [],
+    "continent": "South America",
+    "country": "Argentina",
+    "range": "Andes",
+    "stats": {
+      "altitude": 6961,
+      "prominence": 6961,
+      "deathRate": 2.0,
+      "successRate": 40.0,
+      "averageDuration": 18,
+      "firstAscentYear": 1897
+    },
+    "firstAscent": {
+      "date": "1897-01-14",
+      "climbers": [
+        {
+          "name": "Matthias Zurbriggen",
+          "nationality": "Switzerland"
+        }
+      ]
+    },
+    "dangers": [
+      "Altitude sickness",
+      "Extreme weather",
+      "High winds"
+    ],
+    "description": "Aconcagua is the highest mountain outside Asia and one of the Seven Summits. It is the highest peak in both the Western and Southern Hemispheres.",
+    "images": [
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1920"
+    ],
+    "expedition": {
+      "difficulty": "Challenging",
+      "bestSeasons": [
+        "Summer"
+      ],
+      "estimatedBudget": {
+        "min": 5000,
+        "max": 12000,
+        "currency": "USD"
+      },
+      "requiredEquipment": [
+        "Ice axe",
+        "Crampons",
+        "High altitude gear"
+      ],
+      "recommendedDuration": 18
+    },
+    "coordinates": {
+      "latitude": -32.6532,
+      "longitude": -70.0109
+    },
+    "facts": [
+      "Highest mountain outside Asia at 6,961 meters",
+      "One of the Seven Summits",
+      "Highest peak in both Western and Southern Hemispheres"
+    ]
+  },
+  {
+    "id": "kilimanjaro",
+    "name": "Mount Kilimanjaro",
+    "alternativeNames": [
+      "Kilima-Njaro"
+    ],
+    "continent": "Africa",
+    "country": "Tanzania",
+    "range": "Kilimanjaro",
+    "stats": {
+      "altitude": 5895,
+      "prominence": 5885,
+      "deathRate": 0.1,
+      "successRate": 65.0,
+      "averageDuration": 7,
+      "firstAscentYear": 1889
+    },
+    "firstAscent": {
+      "date": "1889-10-06",
+      "climbers": [
+        {
+          "name": "Hans Meyer",
+          "nationality": "Germany"
+        },
+        {
+          "name": "Ludwig Purtscheller",
+          "nationality": "Austria"
+        }
+      ]
+    },
+    "dangers": [
+      "Altitude sickness"
+    ],
+    "description": "Mount Kilimanjaro is a dormant volcano in Tanzania. It is the highest mountain in Africa and the highest free-standing mountain in the world.",
+    "images": [
+      "https://images.unsplash.com/photo-1589182337358-2cb63099350c?q=80&w=1920",
+      "https://images.unsplash.com/photo-1650668302197-7f556c34cb91?q=80&w=1920"
+    ],
+    "expedition": {
+      "difficulty": "Moderate",
+      "bestSeasons": [
+        "Summer",
+        "Winter"
+      ],
+      "estimatedBudget": {
+        "min": 2000,
+        "max": 6000,
+        "currency": "USD"
+      },
+      "requiredEquipment": [
+        "Trekking poles",
+        "Warm clothing",
+        "Headlamp"
+      ],
+      "recommendedDuration": 7
+    },
+    "coordinates": {
+      "latitude": -3.0674,
+      "longitude": 37.3556
+    },
+    "facts": [
+      "Highest mountain in Africa at 5,895 meters",
+      "Highest free-standing mountain in the world",
+      "Dormant volcano with three volcanic cones"
+    ]
+  },
+  {
+    "id": "vinson",
+    "name": "Vinson Massif",
+    "alternativeNames": [
+      "Mount Vinson"
+    ],
+    "continent": "Antarctica",
+    "country": "Antarctica",
+    "range": "Sentinel Range",
+    "stats": {
+      "altitude": 4892,
+      "prominence": 4892,
+      "deathRate": 0.05,
+      "successRate": 85.0,
+      "averageDuration": 14,
+      "firstAscentYear": 1966
+    },
+    "firstAscent": {
+      "date": "1966-12-17",
+      "climbers": [
+        {
+          "name": "Nicholas Clinch",
+          "nationality": "USA"
+        }
+      ]
+    },
+    "dangers": [
+      "Extreme weather",
+      "Frostbite",
+      "Hypothermia"
+    ],
+    "description": "Vinson Massif is the highest mountain in Antarctica. It is extremely remote and requires significant logistical support.",
+    "images": [
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1920"
+    ],
+    "expedition": {
+      "difficulty": "Challenging",
+      "bestSeasons": [
+        "Summer"
+      ],
+      "estimatedBudget": {
+        "min": 35000,
+        "max": 50000,
+        "currency": "USD"
+      },
+      "requiredEquipment": [
+        "Ice axe",
+        "Crampons",
+        "Extreme cold gear",
+        "Satellite phone"
+      ],
+      "recommendedDuration": 14
+    },
+    "coordinates": {
+      "latitude": -78.5254,
+      "longitude": -85.6171
+    },
+    "facts": [
+      "Highest mountain in Antarctica at 4,892 meters",
+      "One of the Seven Summits",
+      "One of the most remote mountains on Earth"
+    ]
+  },
+  {
+    "id": "puncak-jaya",
+    "name": "Puncak Jaya",
+    "alternativeNames": [
+      "Carstensz Pyramid"
+    ],
+    "continent": "Oceania",
+    "country": "Indonesia",
+    "range": "Sudirman Range",
+    "stats": {
+      "altitude": 4884,
+      "prominence": 4884,
+      "deathRate": 0.2,
+      "successRate": 70.0,
+      "averageDuration": 10,
+      "firstAscentYear": 1962
+    },
+    "firstAscent": {
+      "date": "1962-02-13",
+      "climbers": [
+        {
+          "name": "Heinrich Harrer",
+          "nationality": "Austria"
+        }
+      ]
+    },
+    "dangers": [
+      "Rockfall",
+      "Political instability"
+    ],
+    "description": "Puncak Jaya is the highest mountain in Oceania and the highest island peak in the world. It features technical rock climbing.",
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1920"
+    ],
+    "expedition": {
+      "difficulty": "Challenging",
+      "bestSeasons": [
+        "Summer"
+      ],
+      "estimatedBudget": {
+        "min": 10000,
+        "max": 25000,
+        "currency": "USD"
+      },
+      "requiredEquipment": [
+        "Rock climbing gear",
+        "Rope",
+        "Helmet"
+      ],
+      "recommendedDuration": 10
+    },
+    "coordinates": {
+      "latitude": -4.0784,
+      "longitude": 137.158
+    },
+    "facts": [
+      "Highest mountain in Oceania at 4,884 meters",
+      "One of the Seven Summits (alternate list)",
+      "Highest island peak in the world"
+    ]
+  },
+  {
+    "id": "lhotse",
+    "name": "Lhotse",
+    "alternativeNames": ["South Peak"],
+    "continent": "Asia",
+    "country": "Nepal/China",
+    "range": "Himalayas",
+    "stats": {
+      "altitude": 8516,
+      "prominence": 610,
+      "deathRate": 2.7,
+      "successRate": 25.0,
+      "averageDuration": 60,
+      "firstAscentYear": 1956
+    },
+    "firstAscent": {
+      "date": "1956-05-18",
+      "climbers": [
+        {
+          "name": "Fritz Luchsinger",
+          "nationality": "Switzerland"
+        },
+        {
+          "name": "Ernst Reiss",
+          "nationality": "Switzerland"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Altitude sickness",
+      "Ice fall"
+    ],
+    "description": "Lhotse is the fourth highest mountain in the world at 8,516 meters, located in the Himalayas on the Nepal-Tibet border. Connected to Mount Everest via the South Col, it features one of the most impressive and technical south faces in mountaineering. First ascended in 1956 by a Swiss expedition.",
+    "images": [
+      "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=1920"
+    ],
+    "expedition": {
+      "difficulty": "Extreme",
+      "bestSeasons": [
+        "Spring",
+        "Autumn"
+      ],
+      "estimatedBudget": {
+        "min": 25000,
+        "max": 70000,
+        "currency": "USD"
+      },
+      "requiredEquipment": [
+        "Oxygen tanks",
+        "Ice axe",
+        "Crampons"
+      ],
+      "recommendedDuration": 60
+    },
+    "coordinates": {
+      "latitude": 27.9617,
+      "longitude": 86.9333
+    },
+    "facts": [
+      "Fourth highest mountain at 8,516 meters",
+      "Connected to Everest via the South Col",
+      "Name means 'South Peak' in Tibetan"
+    ]
+  },
+  {
+    "id": "makalu",
+    "name": "Makalu",
+    "alternativeNames": ["The Great Black", "Maha Kala"],
+    "continent": "Asia",
+    "country": "Nepal/China",
+    "range": "Himalayas",
+    "stats": {
+      "altitude": 8485,
+      "prominence": 2386,
+      "deathRate": 8.0,
+      "successRate": 30.0,
+      "averageDuration": 55,
+      "firstAscentYear": 1955
+    },
+    "firstAscent": {
+      "date": "1955-05-15",
+      "climbers": [
+        {
+          "name": "Lionel Terray",
+          "nationality": "France"
+        },
+        {
+          "name": "Jean Couzy",
+          "nationality": "France"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Altitude sickness",
+      "Extreme weather"
+    ],
+    "description": "Makalu, the fifth highest peak in the world at 8,485 meters, stands in the Mahalangur Himalaya range in Nepal. Its distinctive pyramid shape and sharp ridges make it one of the most aesthetically stunning mountains in the Himalayas. First ascended in 1955 by a French expedition led by Jean Franco.",
+    "images": [
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1920"
+    ],
+    "expedition": {
+      "difficulty": "Extreme",
+      "bestSeasons": [
+        "Spring",
+        "Autumn"
+      ],
+      "estimatedBudget": {
+        "min": 20000,
+        "max": 60000,
+        "currency": "USD"
+      },
+      "requiredEquipment": [
+        "Oxygen tanks",
+        "Ice axe",
+        "Technical gear"
+      ],
+      "recommendedDuration": 55
+    },
+    "coordinates": {
+      "latitude": 27.8894,
+      "longitude": 87.0886
+    },
+    "facts": [
+      "Fifth highest mountain at 8,485 meters",
+      "Known for its distinctive pyramid shape",
+      "Considered one of the hardest 8000ers"
+    ]
+  },
+  {
+    "id": "cho-oyu",
+    "name": "Cho Oyu",
+    "alternativeNames": [],
+    "continent": "Asia",
+    "country": "Nepal/China",
+    "range": "Himalayas",
+    "stats": {
+      "altitude": 8188,
+      "prominence": 2340,
+      "deathRate": 1.4,
+      "successRate": 44.0,
+      "averageDuration": 50,
+      "firstAscentYear": 1954
+    },
+    "firstAscent": {
+      "date": "1954-10-19",
+      "climbers": [
+        {
+          "name": "Herbert Tichy",
+          "nationality": "Austria"
+        },
+        {
+          "name": "Joseph Jöchler",
+          "nationality": "Austria"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Altitude sickness",
+      "Crevasses"
+    ],
+    "description": "Cho Oyu is the sixth highest mountain in the world. It is considered the easiest 8000-meter peak to climb.",
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1920"
+    ],
+    "expedition": {
+      "difficulty": "Extreme",
+      "bestSeasons": [
+        "Spring",
+        "Autumn"
+      ],
+      "estimatedBudget": {
+        "min": 18000,
+        "max": 40000,
+        "currency": "USD"
+      },
+      "requiredEquipment": [
+        "Oxygen tanks",
+        "Ice axe",
+        "Crampons"
+      ],
+      "recommendedDuration": 50
+    },
+    "coordinates": {
+      "latitude": 28.0942,
+      "longitude": 86.6608
+    },
+    "facts": [
+      "Sixth highest mountain at 8,188 meters",
+      "Considered easiest 8000-meter peak",
+      "Name means 'Turquoise Goddess' in Tibetan"
+    ]
+  },
+  {
+    "id": "annapurna",
+    "name": "Annapurna I",
+    "alternativeNames": [
+      "Annapurna"
+    ],
+    "continent": "Asia",
+    "country": "Nepal",
+    "range": "Himalayas",
+    "stats": {
+      "altitude": 8091,
+      "prominence": 2984,
+      "deathRate": 32.0,
+      "successRate": 34.0,
+      "averageDuration": 50,
+      "firstAscentYear": 1950
+    },
+    "firstAscent": {
+      "date": "1950-06-03",
+      "climbers": [
+        {
+          "name": "Maurice Herzog",
+          "nationality": "France"
+        },
+        {
+          "name": "Louis Lachenal",
+          "nationality": "France"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Altitude sickness",
+      "Ice fall",
+      "Rockfall"
+    ],
+    "description": "Annapurna I is the tenth highest mountain in the world and statistically the most dangerous 8000-meter peak. It was the first 8000er to be climbed.",
+    "images": [
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1920"
+    ],
+    "expedition": {
+      "difficulty": "Extreme",
+      "bestSeasons": [
+        "Spring",
+        "Autumn"
+      ],
+      "estimatedBudget": {
+        "min": 22000,
+        "max": 55000,
+        "currency": "USD"
+      },
+      "requiredEquipment": [
+        "Oxygen tanks",
+        "Ice axe",
+        "Avalanche gear"
+      ],
+      "recommendedDuration": 50
+    },
+    "coordinates": {
+      "latitude": 28.595,
+      "longitude": 83.8203
+    },
+    "facts": [
+      "Tenth highest mountain at 8,091 meters",
+      "First 8000-meter peak ever climbed",
+      "Deadliest 8000er with 32% fatality rate"
+    ]
+  },
+  {
+    "id": "eiger",
+    "name": "Eiger",
+    "alternativeNames": [],
+    "continent": "Europe",
+    "country": "Switzerland",
+    "range": "Alps",
+    "stats": {
+      "altitude": 3970,
+      "prominence": 340,
+      "deathRate": 2.0,
+      "successRate": 60.0,
+      "averageDuration": 2,
+      "firstAscentYear": 1858
+    },
+    "firstAscent": {
+      "date": "1858-08-11",
+      "climbers": [
+        {
+          "name": "Charles Barrington",
+          "nationality": "Ireland"
+        }
+      ]
+    },
+    "dangers": [
+      "Rockfall",
+      "Avalanches",
+      "Ice fall"
+    ],
+    "description": "The Eiger is famous for its north face, one of the most dangerous climbs in the Alps. The face has claimed over 60 lives.",
+    "images": [
+      "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?q=80&w=1920"
+    ],
+    "expedition": {
+      "difficulty": "Extreme",
+      "bestSeasons": [
+        "Summer"
+      ],
+      "estimatedBudget": {
+        "min": 2500,
+        "max": 6000,
+        "currency": "EUR"
+      },
+      "requiredEquipment": [
+        "Ice axe",
+        "Crampons",
+        "Rock climbing gear"
+      ],
+      "recommendedDuration": 2
+    },
+    "coordinates": {
+      "latitude": 46.5772,
+      "longitude": 8.0058
+    },
+    "facts": [
+      "Famous for its deadly north face",
+      "Over 60 climbers have died on the north face",
+      "Name means 'Ogre' in German"
+    ]
+  },
+  {
+    "id": "nanga-parbat",
+    "name": "Nanga Parbat",
+    "alternativeNames": [
+      "Killer Mountain"
+    ],
+    "continent": "Asia",
+    "country": "Pakistan",
+    "range": "Himalayas",
+    "stats": {
+      "altitude": 8126,
+      "prominence": 4608,
+      "deathRate": 22.3,
+      "successRate": 20.0,
+      "averageDuration": 60,
+      "firstAscentYear": 1953
+    },
+    "firstAscent": {
+      "date": "1953-07-03",
+      "climbers": [
+        {
+          "name": "Hermann Buhl",
+          "nationality": "Austria"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Altitude sickness",
+      "Extreme weather",
+      "Ice fall"
+    ],
+    "description": "Nanga Parbat, known as 'Killer Mountain', is the ninth highest mountain in the world. It has an extremely high fatality rate.",
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1920"
+    ],
+    "expedition": {
+      "difficulty": "Extreme",
+      "bestSeasons": [
+        "Summer"
+      ],
+      "estimatedBudget": {
+        "min": 20000,
+        "max": 50000,
+        "currency": "USD"
+      },
+      "requiredEquipment": [
+        "Oxygen tanks",
+        "Ice axe",
+        "Avalanche equipment"
+      ],
+      "recommendedDuration": 60
+    },
+    "coordinates": {
+      "latitude": 35.2372,
+      "longitude": 74.5894
+    },
+    "facts": [
+      "Ninth highest mountain at 8,126 meters",
+      "Known as 'Killer Mountain'",
+      "Hermann Buhl made first solo ascent of an 8000er"
+    ]
+  },
+  {
+    "id": "dhaulagiri",
+    "name": "Dhaulagiri I",
+    "alternativeNames": [
+      "Dhaulagiri"
+    ],
+    "continent": "Asia",
+    "country": "Nepal",
+    "range": "Himalayas",
+    "stats": {
+      "altitude": 8167,
+      "prominence": 3357,
+      "deathRate": 16.0,
+      "successRate": 39.0,
+      "averageDuration": 55,
+      "firstAscentYear": 1960
+    },
+    "firstAscent": {
+      "date": "1960-05-13",
+      "climbers": [
+        {
+          "name": "Kurt Diemberger",
+          "nationality": "Austria"
+        },
+        {
+          "name": "Peter Diener",
+          "nationality": "Germany"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Altitude sickness",
+      "Extreme weather"
+    ],
+    "description": "Dhaulagiri is the seventh highest mountain in the world. Its name means 'White Mountain' in Sanskrit.",
+    "images": [
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1920"
+    ],
+    "expedition": {
+      "difficulty": "Extreme",
+      "bestSeasons": [
+        "Spring",
+        "Autumn"
+      ],
+      "estimatedBudget": {
+        "min": 18000,
+        "max": 45000,
+        "currency": "USD"
+      },
+      "requiredEquipment": [
+        "Oxygen tanks",
+        "Ice axe",
+        "Crampons"
+      ],
+      "recommendedDuration": 55
+    },
+    "coordinates": {
+      "latitude": 28.6983,
+      "longitude": 83.4933
+    },
+    "facts": [
+      "Seventh highest mountain at 8,167 meters",
+      "Name means 'White Mountain'",
+      "Massive south face rises 4000 meters from base"
+    ]
+  },
+  {
+    "id": "manaslu",
+    "name": "Manaslu",
+    "alternativeNames": [
+      "Kutang"
+    ],
+    "continent": "Asia",
+    "country": "Nepal",
+    "range": "Himalayas",
+    "stats": {
+      "altitude": 8163,
+      "prominence": 3092,
+      "deathRate": 9.8,
+      "successRate": 45.0,
+      "averageDuration": 50,
+      "firstAscentYear": 1956
+    },
+    "firstAscent": {
+      "date": "1956-05-09",
+      "climbers": [
+        {
+          "name": "Toshio Imanishi",
+          "nationality": "Japan"
+        },
+        {
+          "name": "Gyalzen Norbu",
+          "nationality": "Nepal"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Altitude sickness",
+      "Crevasses"
+    ],
+    "description": "Manaslu, the eighth highest summit in the world at 8,163 meters, dominates the Mansiri Himal massif in Nepal. Its name means 'Mountain of the Spirit' in Sanskrit. Considered one of the more accessible 8000-meter peaks, it nevertheless presents significant challenges with a notable mortality rate. First ascended by a Japanese expedition in 1956.",
+    "images": [
+      "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=1920"
+    ],
+    "expedition": {
+      "difficulty": "Extreme",
+      "bestSeasons": [
+        "Spring",
+        "Autumn"
+      ],
+      "estimatedBudget": {
+        "min": 16000,
+        "max": 40000,
+        "currency": "USD"
+      },
+      "requiredEquipment": [
+        "Oxygen tanks",
+        "Ice axe",
+        "Crampons"
+      ],
+      "recommendedDuration": 50
+    },
+    "coordinates": {
+      "latitude": 28.5497,
+      "longitude": 84.5597
+    },
+    "facts": [
+      "Eighth highest mountain at 8,163 meters",
+      "Name means 'Mountain of the Spirit'",
+      "First ascent was made by Japanese expedition"
+    ]
+  },
+  {
+    "id": "mount-cook",
+    "name": "Aoraki / Mount Cook",
+    "alternativeNames": [
+      "Aoraki",
+      "Mount Cook"
+    ],
+    "continent": "Oceania",
+    "country": "New Zealand",
+    "range": "Southern Alps",
+    "stats": {
+      "altitude": 3724,
+      "prominence": 3724,
+      "deathRate": 1.2,
+      "successRate": 55.0,
+      "averageDuration": 3,
+      "firstAscentYear": 1894
+    },
+    "firstAscent": {
+      "date": "1894-12-25",
+      "climbers": [
+        {
+          "name": "Tom Fyfe",
+          "nationality": "New Zealand"
+        },
+        {
+          "name": "George Graham",
+          "nationality": "New Zealand"
+        },
+        {
+          "name": "Jack Clarke",
+          "nationality": "New Zealand"
+        }
+      ]
+    },
+    "dangers": [
+      "Avalanches",
+      "Rockfall",
+      "Extreme weather"
+    ],
+    "description": "Aoraki / Mount Cook is the highest mountain in New Zealand. The Māori name Aoraki means 'Cloud Piercer'.",
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1920"
+    ],
+    "expedition": {
+      "difficulty": "Challenging",
+      "bestSeasons": [
+        "Summer"
+      ],
+      "estimatedBudget": {
+        "min": 2000,
+        "max": 5000,
+        "currency": "NZD"
+      },
+      "requiredEquipment": [
+        "Ice axe",
+        "Crampons",
+        "Rope",
+        "Helmet"
+      ],
+      "recommendedDuration": 3
+    },
+    "coordinates": {
+      "latitude": -43.595,
+      "longitude": 170.1419
+    },
+    "facts": [
+      "Highest mountain in New Zealand at 3,724 meters",
+      "Māori name Aoraki means 'Cloud Piercer'",
+      "Edmund Hillary trained here before Everest"
+    ]
+  },
+  {
+    "id": "grand-teton",
+    "name": "Grand Teton",
+    "alternativeNames": [],
+    "continent": "North America",
+    "country": "United States",
+    "range": "Teton Range",
+    "stats": {
+      "altitude": 4199,
+      "prominence": 1997,
+      "deathRate": 0.3,
+      "successRate": 70.0,
+      "averageDuration": 2,
+      "firstAscentYear": 1898
+    },
+    "firstAscent": {
+      "date": "1898-08-11",
+      "climbers": [
+        {
+          "name": "William Owen",
+          "nationality": "USA"
+        }
+      ]
+    },
+    "dangers": [
+      "Rockfall",
+      "Altitude sickness"
+    ],
+    "description": "Grand Teton is the highest mountain in Grand Teton National Park. It is a classic American mountaineering destination.",
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1920"
+    ],
+    "expedition": {
+      "difficulty": "Challenging",
+      "bestSeasons": [
+        "Summer"
+      ],
+      "estimatedBudget": {
+        "min": 1000,
+        "max": 3000,
+        "currency": "USD"
+      },
+      "requiredEquipment": [
+        "Rope",
+        "Helmet",
+        "Rock climbing gear"
+      ],
+      "recommendedDuration": 2
+    },
+    "coordinates": {
+      "latitude": 43.7412,
+      "longitude": -110.8024
+    },
+    "facts": [
+      "Highest peak in Grand Teton National Park at 4,199 meters",
+      "Classic American alpine climb",
+      "Extremely popular with rock climbers"
+    ]
+  }
+]

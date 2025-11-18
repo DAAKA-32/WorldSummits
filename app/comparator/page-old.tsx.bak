@@ -1,0 +1,267 @@
+"use client"
+
+import { useState } from "react"
+import { getMountains } from "@/lib/mountains"
+import { Mountain } from "@/types/mountain"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Mountain as MountainIcon, TrendingUp, AlertTriangle, DollarSign, Plus, X } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
+
+export default function ComparatorPage() {
+  const mountains = getMountains()
+  const [selectedMountains, setSelectedMountains] = useState<Mountain[]>([])
+  const [selectedId, setSelectedId] = useState<string>("")
+
+  const addMountain = () => {
+    if (selectedId && selectedMountains.length < 4) {
+      const mountain = mountains.find((m) => m.id === selectedId)
+      if (mountain && !selectedMountains.find((m) => m.id === mountain.id)) {
+        setSelectedMountains([...selectedMountains, mountain])
+        setSelectedId("")
+      }
+    }
+  }
+
+  const removeMountain = (id: string) => {
+    setSelectedMountains(selectedMountains.filter((m) => m.id !== id))
+  }
+
+  const maxAltitude = Math.max(...selectedMountains.map((m) => m.stats.altitude), 1)
+
+  return (
+    <div className="min-h-screen pt-24 pb-16 bg-gradient-to-br from-black via-gray-950 to-black">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="text-center space-y-4 mb-12">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
+            <span className="bg-gradient-to-r from-cyan-400/80 via-blue-300/70 to-sky-400/80 bg-clip-text text-transparent">
+              Comparateur
+            </span>
+            <br />
+            <span className="text-white drop-shadow-[0_0_25px_rgba(34,211,238,0.2)]">de Sommets</span>
+          </h1>
+          <p className="text-lg text-cyan-100/60 max-w-2xl mx-auto font-medium">
+            Comparez jusqu'à 4 sommets côte à côte. Analyse précise et données techniques.
+          </p>
+        </div>
+
+        {/* Selector */}
+        <Card className="mb-8 border-cyan-400/20 bg-black/60 backdrop-blur-md shadow-[0_0_30px_rgba(34,211,238,0.1)]">
+          <CardHeader className="border-b border-cyan-400/15">
+            <CardTitle className="text-2xl font-bold bg-gradient-to-r from-cyan-400/80 to-sky-400/80 bg-clip-text text-transparent">
+              Sélectionner des sommets
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="pt-6">
+            <div className="flex gap-4">
+              <Select value={selectedId} onValueChange={setSelectedId}>
+                <SelectTrigger className="flex-1 border-cyan-400/30 bg-black/40 text-white hover:border-cyan-400/50 transition-colors">
+                  <SelectValue placeholder="Choisir un sommet..." />
+                </SelectTrigger>
+                <SelectContent className="bg-black border-cyan-400/30">
+                  {mountains
+                    .filter((m) => !selectedMountains.find((sm) => sm.id === m.id))
+                    .map((mountain) => (
+                      <SelectItem key={mountain.id} value={mountain.id} className="text-white hover:bg-cyan-400/15">
+                        {mountain.name} ({mountain.stats.altitude.toLocaleString()}m)
+                      </SelectItem>
+                    ))}
+                </SelectContent>
+              </Select>
+              <Button
+                onClick={addMountain}
+                disabled={!selectedId || selectedMountains.length >= 4}
+                className="bg-gradient-to-r from-cyan-600/80 to-cyan-500/80 hover:from-cyan-500/80 hover:to-cyan-400/80 font-semibold uppercase tracking-wider shadow-[0_0_15px_rgba(34,211,238,0.2)] disabled:opacity-50 disabled:shadow-none transition-all"
+              >
+                <Plus className="h-4 w-4 mr-2" />
+                Ajouter
+              </Button>
+            </div>
+            {selectedMountains.length >= 4 && (
+              <p className="text-sm text-cyan-200/60 mt-3 uppercase tracking-wider font-medium">
+                Maximum 4 sommets pour la comparaison
+              </p>
+            )}
+          </CardContent>
+        </Card>
+
+        {/* Comparison */}
+        {selectedMountains.length > 0 ? (
+          <div className="space-y-8">
+            {/* Visual Height Comparison */}
+            <Card className="border-cyan-400/20 bg-black/60 backdrop-blur-md shadow-[0_0_30px_rgba(34,211,238,0.1)]">
+              <CardHeader className="border-b border-cyan-400/15">
+                <CardTitle className="text-2xl font-bold bg-gradient-to-r from-cyan-400/80 to-sky-400/80 bg-clip-text text-transparent">
+                  Comparaison visuelle des altitudes
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="pt-8">
+                <div className="flex items-end justify-around gap-6 h-[400px] px-4">
+                  <AnimatePresence>
+                    {selectedMountains.map((mountain) => (
+                      <motion.div
+                        key={mountain.id}
+                        initial={{ opacity: 0, scaleY: 0 }}
+                        animate={{ opacity: 1, scaleY: 1 }}
+                        exit={{ opacity: 0, scaleY: 0 }}
+                        transition={{ duration: 0.4 }}
+                        className="flex flex-col items-center gap-3 flex-1"
+                        style={{
+                          height: `${(mountain.stats.altitude / maxAltitude) * 100}%`,
+                        }}
+                      >
+                        <button
+                          onClick={() => removeMountain(mountain.id)}
+                          className="mb-1 text-xs text-cyan-300/80 hover:text-cyan-300 flex items-center gap-1 uppercase tracking-wider font-semibold transition-colors"
+                        >
+                          <X className="h-3 w-3" />
+                          Retirer
+                        </button>
+                        <div className="w-full bg-gradient-to-t from-cyan-600/90 via-cyan-500/60 to-cyan-400/30 rounded-t-xl relative group hover:from-cyan-500/90 hover:via-cyan-400/60 hover:to-cyan-300/30 transition-all flex-1 border-t-2 border-cyan-400/80 shadow-[0_0_25px_rgba(34,211,238,0.3)]">
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <MountainIcon className="h-10 w-10 text-black/30" />
+                          </div>
+                        </div>
+                        <div className="text-center">
+                          <p className="font-bold text-base text-white mb-1">{mountain.name}</p>
+                          <p className="text-2xl font-extrabold text-cyan-400">
+                            {mountain.stats.altitude.toLocaleString()}m
+                          </p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Detailed Comparison Table */}
+            <Card className="border-cyan-400/20 bg-black/60 backdrop-blur-md shadow-[0_0_30px_rgba(34,211,238,0.1)]">
+              <CardHeader className="border-b border-cyan-400/15">
+                <CardTitle className="text-2xl font-bold bg-gradient-to-r from-cyan-400/80 to-sky-400/80 bg-clip-text text-transparent">
+                  Comparaison détaillée
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="pt-6">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="border-b border-cyan-400/20">
+                        <th className="text-left py-4 px-4 font-bold text-cyan-300 uppercase tracking-wider text-sm">Caractéristique</th>
+                        {selectedMountains.map((mountain) => (
+                          <th
+                            key={mountain.id}
+                            className="text-center py-4 px-4 font-bold text-cyan-300 uppercase tracking-wider text-sm"
+                          >
+                            {mountain.name}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <ComparisonRow
+                        label="Continent"
+                        values={selectedMountains.map((m) => m.continent)}
+                        render={(value) => <Badge variant="secondary" className="uppercase tracking-wider bg-cyan-500/15 text-cyan-300 border-cyan-400/30">{value}</Badge>}
+                      />
+                      <ComparisonRow
+                        label="Pays"
+                        values={selectedMountains.map((m) => m.country)}
+                      />
+                      <ComparisonRow
+                        label="Altitude"
+                        values={selectedMountains.map((m) => `${m.stats.altitude.toLocaleString()}m`)}
+                        render={(value) => <span className="font-bold text-cyan-400 text-lg">{value}</span>}
+                      />
+                      <ComparisonRow
+                        label="Difficulté"
+                        values={selectedMountains.map((m) => m.expedition.difficulty)}
+                        render={(value) => (
+                          <Badge
+                            variant={
+                              value === "Extreme"
+                                ? "destructive"
+                                : value === "Challenging"
+                                ? "default"
+                                : "secondary"
+                            }
+                            className="uppercase tracking-wider font-semibold bg-cyan-500/15 text-cyan-300 border-cyan-400/30"
+                          >
+                            {value}
+                          </Badge>
+                        )}
+                      />
+                      <ComparisonRow
+                        label="Taux de réussite"
+                        values={selectedMountains.map((m) => `${m.stats.successRate}%`)}
+                        render={(value) => (
+                          <span className="text-green-400 font-bold text-base">{value}</span>
+                        )}
+                      />
+                      <ComparisonRow
+                        label="Taux de mortalité"
+                        values={selectedMountains.map((m) => `${m.stats.deathRate}%`)}
+                        render={(value) => (
+                          <span className="text-red-400 font-bold text-base">{value}</span>
+                        )}
+                      />
+                      <ComparisonRow
+                        label="Durée moyenne"
+                        values={selectedMountains.map((m) => `${m.stats.averageDuration} jours`)}
+                      />
+                      <ComparisonRow
+                        label="Budget estimé"
+                        values={selectedMountains.map(
+                          (m) =>
+                            `${m.expedition.estimatedBudget.min.toLocaleString()}-${m.expedition.estimatedBudget.max.toLocaleString()} ${m.expedition.estimatedBudget.currency}`
+                        )}
+                        render={(value) => <span className="text-cyan-200/60 text-sm">{value}</span>}
+                      />
+                      <ComparisonRow
+                        label="Première ascension"
+                        values={selectedMountains.map((m) => m.stats.firstAscentYear.toString())}
+                      />
+                    </tbody>
+                  </table>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        ) : (
+          <Card className="border-cyan-400/20 bg-black/60 backdrop-blur-md shadow-[0_0_30px_rgba(34,211,238,0.1)]">
+            <CardContent className="py-20 text-center">
+              <MountainIcon className="h-20 w-20 text-cyan-400/30 mx-auto mb-6" />
+              <p className="text-xl text-cyan-100/60 font-semibold">
+                Sélectionnez des sommets pour commencer la comparaison
+              </p>
+            </CardContent>
+          </Card>
+        )}
+      </div>
+    </div>
+  )
+}
+
+function ComparisonRow({
+  label,
+  values,
+  render,
+}: {
+  label: string
+  values: string[]
+  render?: (value: string) => React.ReactNode
+}) {
+  return (
+    <tr className="border-b border-cyan-400/10 hover:bg-cyan-400/5 transition-colors">
+      <td className="py-5 px-4 font-semibold text-cyan-200/70 uppercase tracking-wider text-xs">{label}</td>
+      {values.map((value, i) => (
+        <td key={i} className="py-5 px-4 text-center text-white/80">
+          {render ? render(value) : value}
+        </td>
+      ))}
+    </tr>
+  )
+}

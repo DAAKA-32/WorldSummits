@@ -153,6 +153,66 @@ export function MountainDetailClient({ mountain }: MountainDetailClientProps) {
               </CardContent>
             </Card>
 
+            {/* Image Gallery Card */}
+            {mountain.images && mountain.images.length > 1 && (
+              <Card className="border-white/10 bg-gradient-to-br from-gray-900 to-black backdrop-blur-md">
+                <CardHeader>
+                  <CardTitle className="text-base md:text-xl font-bold text-white">Galerie</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
+                    {mountain.images.slice(1, 4).map((image, index) => (
+                      <div key={index} className="relative h-32 md:h-40 rounded-lg overflow-hidden group cursor-pointer">
+                        <Image
+                          src={image}
+                          alt={`${mountain.name} - Photo ${index + 2}`}
+                          fill
+                          className="object-cover transition-transform group-hover:scale-110"
+                          quality={80}
+                        />
+                        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
+            {/* Preparation Tips Card */}
+            <Card className="border-white/10 bg-gradient-to-br from-gray-900 to-black backdrop-blur-md">
+              <CardHeader>
+                <CardTitle className="text-base md:text-xl font-bold text-white">Conseils de préparation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  <li className="flex items-start gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                    <span className="text-xs md:text-sm text-gray-300">Acclimatation progressive recommandée</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                    <span className="text-xs md:text-sm text-gray-300">Entraînement physique intensif requis</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                    <span className="text-xs md:text-sm text-gray-300">Vérifier les conditions météorologiques</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                    <span className="text-xs md:text-sm text-gray-300">Assurance spécialisée nécessaire</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                    <span className="text-xs md:text-sm text-gray-300">Guide expérimenté fortement recommandé</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                    <span className="text-xs md:text-sm text-gray-300">Permis d'escalade peut être requis</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
             {/* Tabs */}
             <Tabs defaultValue="stats" className="w-full">
               <TabsList className="grid w-full grid-cols-3 bg-black/60 border border-white/10">
@@ -324,6 +384,40 @@ export function MountainDetailClient({ mountain }: MountainDetailClientProps) {
                     {mountain.coordinates.longitude.toFixed(4)}°E
                   </p>
                 </div>
+              </CardContent>
+            </Card>
+
+            {/* Key Facts Card */}
+            <Card className="border-white/10 bg-gradient-to-br from-gray-900 to-black backdrop-blur-md">
+              <CardHeader>
+                <CardTitle className="text-base md:text-xl font-bold text-white">Informations clés</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div>
+                  <span className="text-xs text-gray-500 uppercase tracking-wider font-medium">Continent</span>
+                  <p className="font-medium text-white text-sm">{mountain.continent}</p>
+                </div>
+                <Separator className="bg-white/10" />
+                <div>
+                  <span className="text-xs text-gray-500 uppercase tracking-wider font-medium">Difficulté</span>
+                  <Badge variant="outline" className="border-white/30 text-white uppercase tracking-wider text-xs mt-1">
+                    {mountain.expedition.difficulty}
+                  </Badge>
+                </div>
+                <Separator className="bg-white/10" />
+                <div>
+                  <span className="text-xs text-gray-500 uppercase tracking-wider font-medium">Première ascension</span>
+                  <p className="font-medium text-white text-sm">{mountain.stats.firstAscentYear || 'N/A'}</p>
+                </div>
+                {mountain.stats.totalAscents && (
+                  <>
+                    <Separator className="bg-white/10" />
+                    <div>
+                      <span className="text-xs text-gray-500 uppercase tracking-wider font-medium">Ascensions totales</span>
+                      <p className="font-medium text-white text-sm">{mountain.stats.totalAscents.toLocaleString()}</p>
+                    </div>
+                  </>
+                )}
               </CardContent>
             </Card>
 

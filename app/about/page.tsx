@@ -22,7 +22,7 @@ export default function AboutPage() {
             placeholder="blur"
             blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCwAB//2Q=="
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black" />
+          <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/70 to-black" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -43,7 +43,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-black to-gray-950">
+      <section className="py-12 md:py-20 bg-linear-to-b from-black to-gray-950">
         <div className="container mx-auto px-4 max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -69,7 +69,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: 0.05 }}
             >
-              <Card className="bg-gradient-to-br from-gray-900 to-black border-white/10 h-full">
+              <Card className="bg-linear-to-br from-gray-900 to-black border-white/10 h-full">
                 <CardContent className="p-4 md:p-8 text-center">
                   <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-6 bg-primary/10 rounded-full flex items-center justify-center">
                     <Target className="h-6 w-6 md:h-8 md:w-8 text-primary" />
@@ -88,7 +88,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: 0.1 }}
             >
-              <Card className="bg-gradient-to-br from-gray-900 to-black border-white/10 h-full">
+              <Card className="bg-linear-to-br from-gray-900 to-black border-white/10 h-full">
                 <CardContent className="p-4 md:p-8 text-center">
                   <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-6 bg-primary/10 rounded-full flex items-center justify-center">
                     <Users className="h-6 w-6 md:h-8 md:w-8 text-primary" />
@@ -107,7 +107,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <Card className="bg-gradient-to-br from-gray-900 to-black border-white/10 h-full">
+              <Card className="bg-linear-to-br from-gray-900 to-black border-white/10 h-full">
                 <CardContent className="p-4 md:p-8 text-center">
                   <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-6 bg-primary/10 rounded-full flex items-center justify-center">
                     <Heart className="h-6 w-6 md:h-8 md:w-8 text-primary" />
@@ -124,7 +124,7 @@ export default function AboutPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-gray-950 to-black">
+      <section className="py-12 md:py-20 bg-linear-to-b from-gray-950 to-black">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-2xl md:text-4xl font-bold text-white text-center mb-6 md:mb-12">
             Fonctionnalités
@@ -136,7 +136,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Card className="bg-gradient-to-br from-gray-900 to-black border-white/10">
+              <Card className="bg-linear-to-br from-gray-900 to-black border-white/10">
                 <CardContent className="p-4 md:p-6">
                   <h3 className="text-base md:text-xl font-bold text-white mb-2 md:mb-3">🔍 Recherche Avancée</h3>
                   <p className="text-xs md:text-base text-gray-400">
@@ -152,7 +152,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <Card className="bg-gradient-to-br from-gray-900 to-black border-white/10">
+              <Card className="bg-linear-to-br from-gray-900 to-black border-white/10">
                 <CardContent className="p-4 md:p-6">
                   <h3 className="text-base md:text-xl font-bold text-white mb-2 md:mb-3">⚖️ Comparateur Intelligent</h3>
                   <p className="text-xs md:text-base text-gray-400">
@@ -168,7 +168,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Card className="bg-gradient-to-br from-gray-900 to-black border-white/10">
+              <Card className="bg-linear-to-br from-gray-900 to-black border-white/10">
                 <CardContent className="p-4 md:p-6">
                   <h3 className="text-base md:text-xl font-bold text-white mb-2 md:mb-3">📊 Visualisations</h3>
                   <p className="text-xs md:text-base text-gray-400">
@@ -184,7 +184,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <Card className="bg-gradient-to-br from-gray-900 to-black border-white/10">
+              <Card className="bg-linear-to-br from-gray-900 to-black border-white/10">
                 <CardContent className="p-4 md:p-6">
                   <h3 className="text-base md:text-xl font-bold text-white mb-2 md:mb-3">📱 Design Responsive</h3>
                   <p className="text-xs md:text-base text-gray-400">
@@ -198,7 +198,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-black to-gray-950">
+      <section className="py-12 md:py-20 bg-linear-to-b from-black to-gray-950">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

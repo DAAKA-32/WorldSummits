@@ -5,7 +5,7 @@ export function ContinentSection() {
   const continents = getContinents()
 
   return (
-    <section className="py-20 bg-gradient-to-b from-black via-gray-950 to-black">
+    <section className="py-20 bg-linear-to-b from-black via-gray-950 to-black">
       <div className="container mx-auto px-4 space-y-16">
         <div className="text-center space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-white">

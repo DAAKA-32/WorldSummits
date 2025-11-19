@@ -3,7 +3,7 @@ import { Mountain, Linkedin, Instagram, Mail } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-gradient-to-b from-black to-gray-950">
+    <footer className="border-t border-white/10 bg-linear-to-b from-black to-gray-950">
       <div className="container mx-auto px-4 py-6 md:py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {/* Brand */}

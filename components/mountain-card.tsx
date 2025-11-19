@@ -46,7 +46,7 @@ const MountainCardComponent = ({ mountain, index = 0 }: MountainCardProps) => {
       transition={{ duration: 0.5, delay: index * 0.05, ease: [0.22, 1, 0.36, 1] }}
       className="h-full group"
     >
-      <Card className="h-full overflow-hidden border border-white/10 transition-all duration-300 bg-gradient-to-br from-gray-900 to-black hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
+      <Card className="h-full overflow-hidden border border-white/10 transition-all duration-300 bg-linear-to-br from-gray-900 to-black hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
         {/* Image */}
         <div className="relative h-32 md:h-48 w-full overflow-hidden bg-black">
           {mountain.images[0] && !imageError ? (
@@ -66,10 +66,10 @@ const MountainCardComponent = ({ mountain, index = 0 }: MountainCardProps) => {
                 loading={index < 3 ? "eager" : "lazy"}
                 priority={index < 3}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent" />
             </>
           ) : (
-            <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 to-black">
+            <div className="w-full h-full flex flex-col items-center justify-center bg-linear-to-br from-gray-900 to-black">
               <ImageOff className="h-12 w-12 text-gray-700 mb-2" />
               <p className="text-xs text-gray-600">Image non disponible</p>
             </div>

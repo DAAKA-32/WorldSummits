@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 export default function Loading() {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-b from-black via-gray-950 to-black">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-linear-to-b from-black via-gray-950 to-black">
       <div className="flex flex-col items-center gap-6">
         {/* Animated Mountain Icon */}
         <motion.div

@@ -15,10 +15,10 @@ export function SkeletonCard({ index = 0 }: SkeletonCardProps) {
       transition={{ duration: 0.5, delay: index * 0.05 }}
       className="h-full"
     >
-      <Card className="h-full overflow-hidden border border-white/10 bg-gradient-to-br from-gray-900 to-black animate-pulse">
+      <Card className="h-full overflow-hidden border border-white/10 bg-linear-to-br from-gray-900 to-black animate-pulse">
         {/* Image Skeleton */}
         <div className="relative h-48 w-full bg-white/5">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer" />
+          <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/5 to-transparent animate-shimmer" />
         </div>
 
         {/* Content Skeleton */}

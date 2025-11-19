@@ -34,7 +34,12 @@
       "Bash(git commit:*)",
       "Bash(git branch:*)",
       "Bash(git remote add:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(where:*)",
+      "Bash(python scripts/generate-favicon.py:*)",
+      "Bash(pip install:*)",
+      "Bash(copy publicicon.svg appicon.svg)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

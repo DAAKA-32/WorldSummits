@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card"
 
 export function MountainCardSkeleton() {
   return (
-    <Card className="h-full overflow-hidden border border-white/10 bg-gradient-to-br from-gray-900 to-black">
+    <Card className="h-full overflow-hidden border border-white/10 bg-linear-to-br from-gray-900 to-black">
       {/* Image skeleton */}
       <div className="relative h-48 w-full bg-gray-800 animate-pulse">
         <div className="absolute top-3 right-3">

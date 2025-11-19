@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 
 export default function ExpeditionLoading() {
   return (
-    <div className="min-h-screen pt-20 pb-16 bg-gradient-to-b from-black via-gray-950 to-black">
+    <div className="min-h-screen pt-20 pb-16 bg-linear-to-b from-black via-gray-950 to-black">
       <div className="container mx-auto px-4">
         {/* Header Skeleton */}
         <div className="mb-8">
@@ -19,7 +19,7 @@ export default function ExpeditionLoading() {
           {/* Left Column */}
           <div className="lg:col-span-2 space-y-6">
             {/* Simulator Card Skeleton */}
-            <Card className="border-white/10 bg-gradient-to-br from-gray-900 to-black">
+            <Card className="border-white/10 bg-linear-to-br from-gray-900 to-black">
               <CardHeader>
                 <div className="h-7 w-48 bg-gray-800 rounded animate-pulse" />
               </CardHeader>
@@ -37,7 +37,7 @@ export default function ExpeditionLoading() {
           {/* Right Column - Sidebar */}
           <div className="space-y-6">
             {[1, 2, 3].map((i) => (
-              <Card key={i} className="border-white/10 bg-gradient-to-br from-gray-900 to-black">
+              <Card key={i} className="border-white/10 bg-linear-to-br from-gray-900 to-black">
                 <CardHeader>
                   <div className="h-6 w-40 bg-gray-800 rounded animate-pulse" />
                 </CardHeader>

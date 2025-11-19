@@ -409,15 +409,6 @@ export function MountainDetailClient({ mountain }: MountainDetailClientProps) {
                   <span className="text-xs text-gray-500 uppercase tracking-wider font-medium">Première ascension</span>
                   <p className="font-medium text-white text-sm">{mountain.stats.firstAscentYear || 'N/A'}</p>
                 </div>
-                {mountain.stats.totalAscents && (
-                  <>
-                    <Separator className="bg-white/10" />
-                    <div>
-                      <span className="text-xs text-gray-500 uppercase tracking-wider font-medium">Ascensions totales</span>
-                      <p className="font-medium text-white text-sm">{mountain.stats.totalAscents.toLocaleString()}</p>
-                    </div>
-                  </>
-                )}
               </CardContent>
             </Card>
 

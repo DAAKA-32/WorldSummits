@@ -139,13 +139,13 @@ export default function Home() {
           >
             {/* Title */}
             <div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter mb-3 md:mb-4">
+              <h1 className="font-[family-name:var(--font-roboto-condensed)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter mb-3 md:mb-4">
                 <span className="block text-white mb-1.5">WORLD</span>
                 <span className="block bg-gradient-to-r from-orange-500 via-orange-400 to-amber-500 bg-clip-text text-transparent">
                   SUMMITS
                 </span>
               </h1>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 font-light max-w-2xl mx-auto px-4">
+              <p className="font-[family-name:var(--font-roboto-condensed)] text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 font-light max-w-2xl mx-auto px-4">
                 {t('heroSubtitle')}
               </p>
             </div>
@@ -156,7 +156,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg md:rounded-xl p-3 sm:p-4 md:p-6 hover:border-orange-500/50 transition-all flex-1 max-w-[130px] sm:max-w-[150px] md:max-w-none"
+                className="font-[family-name:var(--font-roboto-condensed)] bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg md:rounded-xl p-3 sm:p-4 md:p-6 hover:border-orange-500/50 transition-all flex-1 max-w-[130px] sm:max-w-[150px] md:max-w-none"
               >
                 <MountainIcon className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-orange-500 mx-auto mb-1.5 md:mb-2" />
                 <div className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-0.5 md:mb-1">{stats.totalMountains}</div>
@@ -167,7 +167,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg md:rounded-xl p-3 sm:p-4 md:p-6 hover:border-orange-500/50 transition-all flex-1 max-w-[130px] sm:max-w-[150px] md:max-w-none"
+                className="font-[family-name:var(--font-roboto-condensed)] bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg md:rounded-xl p-3 sm:p-4 md:p-6 hover:border-orange-500/50 transition-all flex-1 max-w-[130px] sm:max-w-[150px] md:max-w-none"
               >
                 <Globe className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-orange-500 mx-auto mb-1.5 md:mb-2" />
                 <div className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-0.5 md:mb-1">{stats.continents}</div>
@@ -178,7 +178,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg md:rounded-xl p-3 sm:p-4 md:p-6 hover:border-orange-500/50 transition-all flex-1 max-w-[130px] sm:max-w-[150px] md:max-w-none"
+                className="font-[family-name:var(--font-roboto-condensed)] bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg md:rounded-xl p-3 sm:p-4 md:p-6 hover:border-orange-500/50 transition-all flex-1 max-w-[130px] sm:max-w-[150px] md:max-w-none"
               >
                 <TrendingUp className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-orange-500 mx-auto mb-1.5 md:mb-2" />
                 <div className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-0.5 md:mb-1">{stats.maxAltitude}<span className="text-base sm:text-lg md:text-xl">m</span></div>
@@ -198,7 +198,7 @@ export default function Home() {
                 onClick={() => {
                   document.getElementById("popular-section")?.scrollIntoView({ behavior: "smooth" })
                 }}
-                className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 text-base sm:text-lg md:text-xl font-semibold rounded-lg shadow-xl shadow-orange-600/30 hover:shadow-orange-600/50 transition-all hover:scale-105"
+                className="font-[family-name:var(--font-roboto-condensed)] bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 text-base sm:text-lg md:text-xl font-semibold rounded-lg shadow-xl shadow-orange-600/30 hover:shadow-orange-600/50 transition-all hover:scale-105"
               >
                 {t('startExploration')}
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />

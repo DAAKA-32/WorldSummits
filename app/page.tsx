@@ -15,8 +15,10 @@ import { Badge } from "@/components/ui/badge"
 import { Search, X, Mountain as MountainIcon, TrendingUp, Globe, GitCompare, Plus, Trash2, Check, ArrowRight } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
+import { useLanguage } from "@/contexts/language-context"
 
 export default function Home() {
+  const { t } = useLanguage()
   const mountains = getMountains()
   const [searchQuery, setSearchQuery] = useState("")
   const debouncedSearchQuery = useDebounce(searchQuery, 300)
@@ -113,7 +115,7 @@ export default function Home() {
     <div className="min-h-screen bg-black">
       <WelcomeModal />
       {/* Hero Section - Improved */}
-      <section className="relative h-screen flex items-start overflow-hidden">
+      <section className="relative h-screen flex items-start overflow-hidden" aria-label="Hero section">
         {/* Background */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -144,7 +146,7 @@ export default function Home() {
                 </span>
               </h1>
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 font-light max-w-2xl mx-auto px-4">
-                Découvrez, explorez et conquérez les plus hauts sommets de la planète
+                {t('heroSubtitle')}
               </p>
             </div>
 
@@ -158,7 +160,7 @@ export default function Home() {
               >
                 <MountainIcon className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-orange-500 mx-auto mb-1.5 md:mb-2" />
                 <div className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-0.5 md:mb-1">{stats.totalMountains}</div>
-                <div className="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider">Sommets</div>
+                <div className="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider">{t('peaks')}</div>
               </motion.div>
 
               <motion.div
@@ -169,7 +171,7 @@ export default function Home() {
               >
                 <Globe className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-orange-500 mx-auto mb-1.5 md:mb-2" />
                 <div className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-0.5 md:mb-1">{stats.continents}</div>
-                <div className="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider">Continents</div>
+                <div className="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider">{t('continents')}</div>
               </motion.div>
 
               <motion.div
@@ -180,7 +182,7 @@ export default function Home() {
               >
                 <TrendingUp className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-orange-500 mx-auto mb-1.5 md:mb-2" />
                 <div className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-0.5 md:mb-1">{stats.maxAltitude}<span className="text-base sm:text-lg md:text-xl">m</span></div>
-                <div className="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider">Plus Haut</div>
+                <div className="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider">{t('highestPeak')}</div>
               </motion.div>
             </div>
 
@@ -198,7 +200,7 @@ export default function Home() {
                 }}
                 className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 text-base sm:text-lg md:text-xl font-semibold rounded-lg shadow-xl shadow-orange-600/30 hover:shadow-orange-600/50 transition-all hover:scale-105"
               >
-                Commencer l'exploration
+                {t('startExploration')}
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </motion.div>
@@ -207,7 +209,7 @@ export default function Home() {
       </section>
 
       {/* Popular Mountains Section */}
-      <section id="popular-section" className="py-24 bg-gradient-to-b from-black via-gray-950 to-black relative overflow-hidden">
+      <section id="popular-section" className="py-24 bg-gradient-to-b from-black via-gray-950 to-black relative overflow-hidden" aria-label="Popular mountains">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-500 rounded-full blur-3xl" />
@@ -222,13 +224,13 @@ export default function Home() {
             className="text-center mb-16"
           >
             <Badge className="bg-primary/10 text-primary border-primary/30 px-6 py-2 text-sm font-semibold tracking-wider mb-4">
-              LES INCONTOURNABLES
+              {t('mustSee')}
             </Badge>
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 tracking-tight">
-              Sommets <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-orange-400 to-amber-500">Populaires</span>
+              {t('popularMountains').split(' ')[0]} <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-orange-400 to-amber-500">{t('popularMountains').split(' ').slice(1).join(' ')}</span>
             </h2>
             <p className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed">
-              Les montagnes les plus emblématiques et prisées des alpinistes du monde entier
+              {t('popularMountainsDesc')}
             </p>
           </motion.div>
 
@@ -271,14 +273,14 @@ export default function Home() {
               }}
               className="bg-white/10 hover:bg-white/20 text-white border border-white/20"
             >
-              Explorer tous les sommets
+              {t('exploreAllPeaks')}
             </Button>
           </div>
         </div>
       </section>
 
       {/* All Mountains Section */}
-      <section id="search-section" className="py-24 bg-gradient-to-b from-black via-gray-950 to-black">
+      <section id="search-section" className="py-24 bg-gradient-to-b from-black via-gray-950 to-black" aria-label="All mountains catalog">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -288,10 +290,10 @@ export default function Home() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
-              Tous les <span className="text-primary">Sommets</span>
+              {t('allPeaks').split(' ')[0]} {t('allPeaks').split(' ')[1]} <span className="text-primary">{t('allPeaks').split(' ').slice(2).join(' ')}</span>
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
-              Explorez notre collection complète de {mountains.length} sommets légendaires
+              {t('allPeaksDesc')} {mountains.length} {t('legendaryPeaks')}
             </p>
 
             <motion.div
@@ -303,7 +305,7 @@ export default function Home() {
             >
               <SearchAutocomplete
                 mountains={mountains}
-                placeholder="Rechercher un sommet par nom, pays ou massif..."
+                placeholder={t('searchPlaceholder')}
               />
             </motion.div>
           </motion.div>
@@ -316,7 +318,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-wrap items-center justify-center gap-3 mb-12"
           >
-            <span className="text-sm text-gray-500 font-medium">Filtrer par:</span>
+            <span className="text-sm text-gray-500 font-medium">{t('filterBy')}</span>
 
             <Badge
               onClick={clearFilters}
@@ -326,7 +328,7 @@ export default function Home() {
                   : "bg-white/5 text-white border-white/20 hover:bg-white/10"
               }`}
             >
-              Tous
+              {t('all')}
             </Badge>
 
             {continents.slice(0, 5).map((continent) => (
@@ -363,7 +365,7 @@ export default function Home() {
                 className="ml-2 px-4 py-2 text-sm font-medium text-white bg-white/10 hover:bg-white/20 rounded-full flex items-center gap-2 transition-all border border-white/10"
               >
                 <X className="h-3 w-3" />
-                Réinitialiser
+                {t('resetFilters')}
               </button>
             )}
           </motion.div>
@@ -371,7 +373,7 @@ export default function Home() {
           {/* Results Count */}
           <div className="mb-6 text-center">
             <p className="text-gray-500">
-              <span className="text-white font-bold text-xl">{filteredMountains.length}</span> {filteredMountains.length > 1 ? "sommets trouvés" : "sommet trouvé"}
+              <span className="text-white font-bold text-xl">{filteredMountains.length}</span> {filteredMountains.length > 1 ? t('peaksFound') : t('peakFound')}
             </p>
           </div>
 
@@ -417,16 +419,16 @@ export default function Home() {
               <div className="max-w-md mx-auto space-y-6">
                 <Search className="h-20 w-20 text-gray-600 mx-auto" />
                 <div>
-                  <p className="text-2xl text-white font-bold mb-2">Aucun sommet trouvé</p>
+                  <p className="text-2xl text-white font-bold mb-2">{t('noPeaksFound')}</p>
                   <p className="text-gray-400 mb-4">
-                    Essayez de modifier vos critères ou tentez l'Everest ?
+                    {t('tryDifferentFilters')}
                   </p>
                 </div>
                 <Button
                   onClick={clearFilters}
                   className="bg-primary hover:bg-primary/90 text-white"
                 >
-                  Réinitialiser les filtres
+                  {t('resetFilters')}
                 </Button>
               </div>
             </div>
@@ -449,7 +451,7 @@ export default function Home() {
                   <div className="flex items-center gap-2 text-white min-w-fit">
                     <GitCompare className="h-5 w-5 text-primary" />
                     <span className="font-bold">{selectedForComparison.length}/4</span>
-                    <span className="text-gray-300 text-sm hidden sm:inline">sommets sélectionnés</span>
+                    <span className="text-gray-300 text-sm hidden sm:inline">{t('peaks')} {t('selected')}</span>
                   </div>
 
                   <div className="hidden sm:flex flex-1 gap-2 overflow-x-auto">
@@ -478,7 +480,7 @@ export default function Home() {
                       onClick={handleCompare}
                       className="bg-primary hover:bg-primary/90 text-white relative"
                     >
-                      <span className="relative z-10">Comparer</span>
+                      <span className="relative z-10">{t('compare')}</span>
                     </Button>
                   </div>
                 </div>

@@ -116,6 +116,21 @@
 
   body {
     @apply bg-background text-foreground;
+    touch-action: pan-x pan-y;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  /* Allow text selection only for useful content */
+  p, h1, h2, h3, h4, h5, h6, span, li, td, th, a, input, textarea {
+    -webkit-user-select: text;
+    user-select: text;
+  }
+
+  /* Prevent selection on UI elements */
+  button, nav, header, footer, .no-select {
+    -webkit-user-select: none;
+    user-select: none;
   }
 
   /* Improved text contrast classes */

@@ -43,6 +43,12 @@ export const metadata: Metadata = {
   authors: [{ name: 'WorldSummits Team' }],
   creator: 'WorldSummits',
   publisher: 'WorldSummits',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
   robots: {
     index: true,
     follow: true,

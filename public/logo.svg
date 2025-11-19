@@ -1,0 +1,18 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Mountain peaks -->
+  <path d="M8 32L16 16L24 24L32 12L40 32H8Z" fill="url(#gradient1)" />
+  <path d="M8 32L16 16L24 24L32 12L40 32H8Z" stroke="#F97316" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- Text: WS -->
+  <text x="48" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">
+    WS
+  </text>
+
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="gradient1" x1="24" y1="12" x2="24" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F97316" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#F97316" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+</svg>

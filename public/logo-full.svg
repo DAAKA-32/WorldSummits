@@ -1,0 +1,21 @@
+<svg width="240" height="60" viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Mountain peaks -->
+  <g transform="translate(0, 10)">
+    <path d="M8 35L20 12L32 24L44 8L56 35H8Z" fill="url(#gradient-full)" />
+    <path d="M8 35L20 12L32 24L44 8L56 35H8Z" stroke="#F97316" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Text: WorldSummits -->
+  <text x="70" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="900" fill="white" letter-spacing="-0.5">
+    World<tspan fill="#F97316">Summits</tspan>
+  </text>
+
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="gradient-full" x1="32" y1="8" x2="32" y2="35" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F97316" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#F97316" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#F97316" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+</svg>

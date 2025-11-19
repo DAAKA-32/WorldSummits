@@ -1,7 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { Mountain, Menu, X } from "lucide-react"
+import Image from "next/image"
+import { Menu, X } from "lucide-react"
 import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { LanguageSelector } from "./language-selector"
@@ -30,16 +31,26 @@ export function Header() {
     >
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative">
-            <Mountain className="h-8 w-8 text-white group-hover:text-primary transition-colors" />
-            <div className="absolute inset-0 blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
-              <Mountain className="h-8 w-8 text-primary" />
-            </div>
+        <Link href="/" className="flex items-center group relative">
+          <div className="relative h-10 w-[200px] sm:w-[240px] transition-transform group-hover:scale-105">
+            <Image
+              src="/logo-full.svg"
+              alt="WorldSummits Logo"
+              fill
+              className="object-contain object-left"
+              priority
+            />
           </div>
-          <span className="text-2xl font-bold text-white tracking-tight">
-            World<span className="text-primary">Summit</span>
-          </span>
+          {/* Glow effect on hover */}
+          <div className="absolute inset-0 blur-md opacity-0 group-hover:opacity-20 transition-opacity pointer-events-none">
+            <Image
+              src="/logo-full.svg"
+              alt=""
+              fill
+              className="object-contain object-left"
+              aria-hidden="true"
+            />
+          </div>
         </Link>
 
         {/* Mobile Menu Button */}

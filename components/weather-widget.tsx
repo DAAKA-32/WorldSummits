@@ -91,7 +91,7 @@ export function WeatherWidget({ mountainId }: WeatherWidgetProps) {
 
   if (loading) {
     return (
-      <Card className="border-white/10 bg-linear-to-br from-gray-900 to-black">
+      <Card className="border-white/10 bg-gradient-to-br from-gray-900 to-black">
         <CardContent className="flex items-center justify-center py-12">
           <Loader2 className="h-8 w-8 text-primary animate-spin" />
           <span className="ml-3 text-gray-300">Chargement météo...</span>
@@ -102,7 +102,7 @@ export function WeatherWidget({ mountainId }: WeatherWidgetProps) {
 
   if (error || !weather) {
     return (
-      <Card className="border-red-500/30 bg-linear-to-br from-gray-900 to-black">
+      <Card className="border-red-500/30 bg-gradient-to-br from-gray-900 to-black">
         <CardContent className="flex items-center justify-center py-12">
           <AlertCircle className="h-8 w-8 text-red-500" />
           <span className="ml-3 text-gray-300">Météo indisponible</span>
@@ -119,7 +119,7 @@ export function WeatherWidget({ mountainId }: WeatherWidgetProps) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Card className="border-white/10 bg-linear-to-br from-gray-900 via-gray-900 to-black backdrop-blur-md overflow-hidden">
+      <Card className="border-white/10 bg-gradient-to-br from-gray-900 via-gray-900 to-black backdrop-blur-md overflow-hidden">
         <CardHeader className="pb-4">
           <div className="flex items-center justify-between">
             <CardTitle className="text-2xl font-bold text-white flex items-center gap-2">

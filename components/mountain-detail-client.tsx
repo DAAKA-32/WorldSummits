@@ -33,7 +33,7 @@ interface MountainDetailClientProps {
 
 export function MountainDetailClient({ mountain }: MountainDetailClientProps) {
   return (
-    <div className="min-h-screen pt-16 md:pt-20 pb-12 md:pb-16 bg-linear-to-b from-black via-gray-950 to-black">
+    <div className="min-h-screen pt-16 md:pt-20 pb-12 md:pb-16 bg-gradient-to-b from-black via-gray-950 to-black">
       {/* Back Button & Share - Fixed at top */}
       <div className="fixed top-20 md:top-24 left-3 right-3 md:left-4 md:right-4 z-50 flex justify-between items-center pointer-events-none">
         <Link href="/" className="pointer-events-auto">
@@ -77,7 +77,7 @@ export function MountainDetailClient({ mountain }: MountainDetailClientProps) {
         )}
 
         {/* Dark Gradient Overlay */}
-        <div className="absolute inset-0 bg-linear-to-t from-black via-black/85 to-black/60 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/85 to-black/60 z-10" />
 
         <div className="container mx-auto px-3 md:px-4 pb-6 md:pb-12 relative z-20">
           <motion.div
@@ -142,7 +142,7 @@ export function MountainDetailClient({ mountain }: MountainDetailClientProps) {
           {/* Left Column - Main Content */}
           <div className="lg:col-span-2 space-y-4 md:space-y-8">
             {/* Description */}
-            <Card className="border-white/10 bg-linear-to-br from-gray-900 to-black backdrop-blur-md">
+            <Card className="border-white/10 bg-gradient-to-br from-gray-900 to-black backdrop-blur-md">
               <CardHeader>
                 <CardTitle className="text-lg md:text-2xl font-bold text-white">À propos</CardTitle>
               </CardHeader>
@@ -155,7 +155,7 @@ export function MountainDetailClient({ mountain }: MountainDetailClientProps) {
 
             {/* Image Gallery Card */}
             {mountain.images && mountain.images.length > 1 && (
-              <Card className="border-white/10 bg-linear-to-br from-gray-900 to-black backdrop-blur-md">
+              <Card className="border-white/10 bg-gradient-to-br from-gray-900 to-black backdrop-blur-md">
                 <CardHeader>
                   <CardTitle className="text-base md:text-xl font-bold text-white">Galerie</CardTitle>
                 </CardHeader>
@@ -179,7 +179,7 @@ export function MountainDetailClient({ mountain }: MountainDetailClientProps) {
             )}
 
             {/* Preparation Tips Card */}
-            <Card className="border-white/10 bg-linear-to-br from-gray-900 to-black backdrop-blur-md">
+            <Card className="border-white/10 bg-gradient-to-br from-gray-900 to-black backdrop-blur-md">
               <CardHeader>
                 <CardTitle className="text-base md:text-xl font-bold text-white">Conseils de préparation</CardTitle>
               </CardHeader>
@@ -226,7 +226,7 @@ export function MountainDetailClient({ mountain }: MountainDetailClientProps) {
               </TabsContent>
 
               <TabsContent value="history" className="mt-4 md:mt-6">
-                <Card className="border-white/10 bg-linear-to-br from-gray-900 to-black backdrop-blur-md">
+                <Card className="border-white/10 bg-gradient-to-br from-gray-900 to-black backdrop-blur-md">
                   <CardHeader>
                     <CardTitle className="text-lg md:text-2xl font-bold text-white">Première ascension</CardTitle>
                   </CardHeader>
@@ -283,7 +283,7 @@ export function MountainDetailClient({ mountain }: MountainDetailClientProps) {
 
               <TabsContent value="expedition" className="mt-4 md:mt-6">
                 <div className="space-y-4 md:space-y-6">
-                  <Card className="border-white/10 bg-linear-to-br from-gray-900 to-black backdrop-blur-md">
+                  <Card className="border-white/10 bg-gradient-to-br from-gray-900 to-black backdrop-blur-md">
                     <CardHeader>
                       <CardTitle className="text-lg md:text-2xl font-bold text-white">Informations pratiques</CardTitle>
                     </CardHeader>
@@ -342,7 +342,7 @@ export function MountainDetailClient({ mountain }: MountainDetailClientProps) {
             <WeatherWidget mountainId={mountain.id} />
 
             {/* Dangers Card */}
-            <Card className="border-red-500/30 bg-linear-to-br from-gray-900 to-black backdrop-blur-md">
+            <Card className="border-red-500/30 bg-gradient-to-br from-gray-900 to-black backdrop-blur-md">
               <CardHeader>
                 <CardTitle className="flex items-center gap-1.5 md:gap-2 text-red-400 text-base md:text-xl font-bold">
                   <AlertTriangle className="h-4 w-4 md:h-5 md:w-5" />
@@ -362,7 +362,7 @@ export function MountainDetailClient({ mountain }: MountainDetailClientProps) {
             </Card>
 
             {/* Location Card */}
-            <Card className="border-white/10 bg-linear-to-br from-gray-900 to-black backdrop-blur-md">
+            <Card className="border-white/10 bg-gradient-to-br from-gray-900 to-black backdrop-blur-md">
               <CardHeader>
                 <CardTitle className="text-base md:text-xl font-bold text-white">Localisation</CardTitle>
               </CardHeader>
@@ -388,7 +388,7 @@ export function MountainDetailClient({ mountain }: MountainDetailClientProps) {
             </Card>
 
             {/* Key Facts Card */}
-            <Card className="border-white/10 bg-linear-to-br from-gray-900 to-black backdrop-blur-md">
+            <Card className="border-white/10 bg-gradient-to-br from-gray-900 to-black backdrop-blur-md">
               <CardHeader>
                 <CardTitle className="text-base md:text-xl font-bold text-white">Informations clés</CardTitle>
               </CardHeader>
@@ -468,7 +468,7 @@ function StatsCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <Card className="border-white/10 bg-linear-to-br from-gray-900 to-black backdrop-blur-md hover:border-primary/30 transition-all">
+      <Card className="border-white/10 bg-gradient-to-br from-gray-900 to-black backdrop-blur-md hover:border-primary/30 transition-all">
         <CardContent className="pt-3 md:pt-6">
           <div className="flex items-center gap-2 md:gap-3">
             <div className={`p-2 md:p-3 rounded-lg ${colorClasses[variant]}`}>

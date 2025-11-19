@@ -6,10 +6,10 @@ import { motion } from "framer-motion"
 
 export default function MountainLoading() {
   return (
-    <div className="min-h-screen pt-20 pb-16 bg-linear-to-b from-black via-gray-950 to-black">
+    <div className="min-h-screen pt-20 pb-16 bg-gradient-to-b from-black via-gray-950 to-black">
       {/* Hero Skeleton */}
       <section className="relative h-[70vh] flex items-end overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-t from-black via-black/85 to-black/60 animate-pulse" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/85 to-black/60 animate-pulse" />
 
         <div className="container mx-auto px-4 pb-12 relative z-20">
           <div className="max-w-4xl space-y-4">
@@ -28,7 +28,7 @@ export default function MountainLoading() {
         {/* Quick Stats Skeleton */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
           {[1, 2, 3, 4].map((i) => (
-            <Card key={i} className="border-white/10 bg-linear-to-br from-gray-900 to-black">
+            <Card key={i} className="border-white/10 bg-gradient-to-br from-gray-900 to-black">
               <CardContent className="pt-6">
                 <div className="flex items-center gap-3">
                   <div className="h-12 w-12 bg-gray-800 rounded-lg animate-pulse" />
@@ -46,7 +46,7 @@ export default function MountainLoading() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column */}
           <div className="lg:col-span-2 space-y-8">
-            <Card className="border-white/10 bg-linear-to-br from-gray-900 to-black">
+            <Card className="border-white/10 bg-gradient-to-br from-gray-900 to-black">
               <CardHeader>
                 <div className="h-7 w-32 bg-gray-800 rounded animate-pulse" />
               </CardHeader>
@@ -63,7 +63,7 @@ export default function MountainLoading() {
           {/* Right Column - Sidebar */}
           <div className="space-y-6">
             {/* Weather Widget Skeleton */}
-            <Card className="border-white/10 bg-linear-to-br from-gray-900 to-black">
+            <Card className="border-white/10 bg-gradient-to-br from-gray-900 to-black">
               <CardHeader>
                 <div className="h-6 w-40 bg-gray-800 rounded animate-pulse" />
               </CardHeader>
@@ -79,7 +79,7 @@ export default function MountainLoading() {
 
             {/* Other Cards Skeleton */}
             {[1, 2, 3].map((i) => (
-              <Card key={i} className="border-white/10 bg-linear-to-br from-gray-900 to-black">
+              <Card key={i} className="border-white/10 bg-gradient-to-br from-gray-900 to-black">
                 <CardHeader>
                   <div className="h-6 w-32 bg-gray-800 rounded animate-pulse" />
                 </CardHeader>

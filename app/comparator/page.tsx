@@ -67,7 +67,7 @@ function ComparatorContent() {
 
       <div className="min-h-[calc(100vh-5rem)] flex flex-col">
         {/* Compact Header */}
-        <div className="bg-linear-to-b from-gray-950 to-black border-b border-white/10 py-6 md:py-8">
+        <div className="bg-gradient-to-b from-gray-950 to-black border-b border-white/10 py-6 md:py-8">
         <div className="container mx-auto px-4">
           {/* Title - Centered */}
           <div className="text-center mb-4 md:mb-6">
@@ -144,7 +144,7 @@ function ComparatorContent() {
           ) : (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               {/* Visual Comparison */}
-              <Card className="border-white/10 bg-linear-to-br from-gray-900 to-black">
+              <Card className="border-white/10 bg-gradient-to-br from-gray-900 to-black">
                 <CardContent className="p-4">
                   <h3 className="text-base font-bold text-white mb-3 flex items-center gap-2">
                     <TrendingUp className="h-4 w-4 text-primary" />
@@ -162,7 +162,7 @@ function ComparatorContent() {
                           className="flex flex-col items-center flex-1 max-w-[120px]"
                           style={{ height: `${(mountain.stats.altitude / maxAltitude) * 100}%` }}
                         >
-                          <div className="w-full bg-linear-to-t from-primary to-primary/40 rounded-t-lg relative group flex-1 min-h-[60px]">
+                          <div className="w-full bg-gradient-to-t from-primary to-primary/40 rounded-t-lg relative group flex-1 min-h-[60px]">
                             {mountain.images[0] && (
                               <div className="absolute inset-0 rounded-t-lg overflow-hidden opacity-20">
                                 <Image src={mountain.images[0]} alt={mountain.name} fill className="object-cover" />
@@ -181,7 +181,7 @@ function ComparatorContent() {
               </Card>
 
               {/* Stats Comparison */}
-              <Card className="border-white/10 bg-linear-to-br from-gray-900 to-black">
+              <Card className="border-white/10 bg-gradient-to-br from-gray-900 to-black">
                 <CardContent className="p-4">
                   <h3 className="text-base font-bold text-white mb-3">Caractéristiques</h3>
                   <div className="space-y-3">
@@ -197,7 +197,7 @@ function ComparatorContent() {
                                 initial={{ width: 0 }}
                                 animate={{ width: `${(mountain.stats.prominence / maxProminence) * 100}%` }}
                                 transition={{ duration: 0.8 }}
-                                className="h-full bg-linear-to-r from-orange-500/80 to-orange-500 rounded-full flex items-center justify-end pr-2"
+                                className="h-full bg-gradient-to-r from-orange-500/80 to-orange-500 rounded-full flex items-center justify-end pr-2"
                               >
                                 <span className="text-xs font-bold text-white">{mountain.stats.prominence.toLocaleString()}m</span>
                               </motion.div>
@@ -220,7 +220,7 @@ function ComparatorContent() {
                                   key={level}
                                   className={`h-6 flex-1 rounded ${
                                     level <= difficultyScore(mountain.expedition.difficulty)
-                                      ? "bg-linear-to-r from-red-500 to-red-600"
+                                      ? "bg-gradient-to-r from-red-500 to-red-600"
                                       : "bg-black/40"
                                   }`}
                                 />
@@ -247,7 +247,7 @@ function ComparatorContent() {
                                 initial={{ width: 0 }}
                                 animate={{ width: `${Math.min((mountain.stats.deathRate / 35) * 100, 100)}%` }}
                                 transition={{ duration: 0.8 }}
-                                className="h-full bg-linear-to-r from-red-600/80 to-red-600 rounded-full flex items-center justify-end pr-2"
+                                className="h-full bg-gradient-to-r from-red-600/80 to-red-600 rounded-full flex items-center justify-end pr-2"
                               >
                                 <span className="text-xs font-bold text-white">{mountain.stats.deathRate}%</span>
                               </motion.div>
@@ -261,7 +261,7 @@ function ComparatorContent() {
               </Card>
 
               {/* Details Table - Full Width */}
-              <Card className="border-white/10 bg-linear-to-br from-gray-900 to-black lg:col-span-2">
+              <Card className="border-white/10 bg-gradient-to-br from-gray-900 to-black lg:col-span-2">
                 <CardContent className="p-4">
                   <h3 className="text-base font-bold text-white mb-3">Détails de l'Expédition</h3>
                   <div className="overflow-x-auto">

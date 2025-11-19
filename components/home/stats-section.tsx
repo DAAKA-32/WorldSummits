@@ -37,7 +37,7 @@ export function StatsSection() {
   ]
 
   return (
-    <section className="py-20 bg-linear-to-b from-black via-gray-950 to-black">
+    <section className="py-20 bg-gradient-to-b from-black via-gray-950 to-black">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -46,7 +46,7 @@ export function StatsSection() {
           transition={{ duration: 0.6 }}
           className="text-center space-y-4 mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-orange-500 via-orange-400 to-amber-500 bg-clip-text text-transparent">En <span className="bg-linear-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Chiffres</span></h2>
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-500 via-orange-400 to-amber-500 bg-clip-text text-transparent">En <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Chiffres</span></h2>
           <p className="text-lg text-orange-200/80 max-w-2xl mx-auto">
             <span className="font-semibold text-orange-300">WorldSummits</span> en quelques statistiques
           </p>

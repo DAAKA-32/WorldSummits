@@ -31,7 +31,7 @@ export function WelcomeModal() {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="max-w-[90vw] sm:max-w-2xl max-h-[85vh] overflow-y-auto bg-linear-to-br from-gray-900 via-black to-gray-900 border-blue-500/30 p-0">
+      <DialogContent className="max-w-[90vw] sm:max-w-2xl max-h-[85vh] overflow-y-auto bg-gradient-to-br from-gray-900 via-black to-gray-900 border-blue-500/30 p-0">
         {/* Background effet */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
@@ -50,7 +50,7 @@ export function WelcomeModal() {
           {/* Header simplifié */}
           <div className="text-center mb-4 sm:mb-6">
             <DialogTitle className="text-xl sm:text-2xl md:text-3xl font-black text-white mb-2">
-              Bienvenue sur <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-500 to-orange-400">WorldSummits</span>
+              Bienvenue sur <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-400">WorldSummits</span>
             </DialogTitle>
 
             <DialogDescription className="text-gray-400 text-sm sm:text-base">
@@ -86,7 +86,7 @@ export function WelcomeModal() {
           <div className="space-y-3">
             <Button
               onClick={handleClose}
-              className="w-full bg-linear-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white font-bold py-4 sm:py-5 text-sm sm:text-base"
+              className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white font-bold py-4 sm:py-5 text-sm sm:text-base"
             >
               Commencer l'exploration
             </Button>

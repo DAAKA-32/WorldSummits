@@ -126,7 +126,7 @@ export default function Home() {
             priority
             quality={90}
           />
-          <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-black" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black" />
         </div>
 
         {/* Hero Content */}
@@ -141,7 +141,7 @@ export default function Home() {
             <div>
               <h1 className="font-[family-name:var(--font-roboto-condensed)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter mb-3 md:mb-4">
                 <span className="block text-white mb-1.5">WORLD</span>
-                <span className="block bg-linear-to-r from-orange-500 via-orange-400 to-amber-500 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-orange-500 via-orange-400 to-amber-500 bg-clip-text text-transparent">
                   SUMMITS
                 </span>
               </h1>
@@ -198,7 +198,7 @@ export default function Home() {
                 onClick={() => {
                   document.getElementById("popular-section")?.scrollIntoView({ behavior: "smooth" })
                 }}
-                className="font-[family-name:var(--font-roboto-condensed)] bg-linear-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 text-base sm:text-lg md:text-xl font-semibold rounded-lg shadow-xl shadow-orange-600/30 hover:shadow-orange-600/50 transition-all hover:scale-105"
+                className="font-[family-name:var(--font-roboto-condensed)] bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 text-base sm:text-lg md:text-xl font-semibold rounded-lg shadow-xl shadow-orange-600/30 hover:shadow-orange-600/50 transition-all hover:scale-105"
               >
                 {t('startExploration')}
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -209,7 +209,7 @@ export default function Home() {
       </section>
 
       {/* Popular Mountains Section */}
-      <section id="popular-section" className="py-24 bg-linear-to-b from-black via-gray-950 to-black relative overflow-hidden" aria-label="Popular mountains">
+      <section id="popular-section" className="py-24 bg-gradient-to-b from-black via-gray-950 to-black relative overflow-hidden" aria-label="Popular mountains">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-500 rounded-full blur-3xl" />
@@ -227,7 +227,7 @@ export default function Home() {
               {t('mustSee')}
             </Badge>
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 tracking-tight">
-              {t('popularMountains').split(' ')[0]} <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-500 via-orange-400 to-amber-500">{t('popularMountains').split(' ').slice(1).join(' ')}</span>
+              {t('popularMountains').split(' ')[0]} <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-orange-400 to-amber-500">{t('popularMountains').split(' ').slice(1).join(' ')}</span>
             </h2>
             <p className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed">
               {t('popularMountainsDesc')}
@@ -280,7 +280,7 @@ export default function Home() {
       </section>
 
       {/* All Mountains Section */}
-      <section id="search-section" className="py-24 bg-linear-to-b from-black via-gray-950 to-black" aria-label="All mountains catalog">
+      <section id="search-section" className="py-24 bg-gradient-to-b from-black via-gray-950 to-black" aria-label="All mountains catalog">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

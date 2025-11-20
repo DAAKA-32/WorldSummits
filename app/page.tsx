@@ -25,6 +25,7 @@ export default function Home() {
   const [selectedContinent, setSelectedContinent] = useState<string>("all")
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>("all")
   const [sortBy, setSortBy] = useState<string>("altitude-desc")
+  const [selectedAltitude, setSelectedAltitude] = useState<number | null>(null)
 
   // Comparator state
   const [selectedForComparison, setSelectedForComparison] = useState<Mountain[]>([])
@@ -33,6 +34,27 @@ export default function Home() {
   const continents = useMemo(() => {
     return Array.from(new Set(mountains.map((m) => m.continent)))
   }, [mountains])
+
+  // Calculate available options count for each altitude range
+  const getAltitudeCount = (altitude: number) => {
+    return mountains.filter((m) => {
+      const matchesContinent = selectedContinent === "all" || m.continent === selectedContinent
+      const matchesAltitude = m.stats.altitude >= altitude && m.stats.altitude < altitude + 1000
+      return matchesContinent && matchesAltitude
+    }).length
+  }
+
+  // Calculate available options count for each continent
+  const getContinentCount = (continent: string) => {
+    return mountains.filter((m) => {
+      const matchesContinent = m.continent === continent
+      let matchesAltitude = true
+      if (selectedAltitude !== null) {
+        matchesAltitude = m.stats.altitude >= selectedAltitude && m.stats.altitude < selectedAltitude + 1000
+      }
+      return matchesContinent && matchesAltitude
+    }).length
+  }
 
   // Filter and sort mountains
   const filteredMountains = useMemo(() => {
@@ -48,7 +70,15 @@ export default function Home() {
         selectedDifficulty === "all" ||
         mountain.expedition.difficulty === selectedDifficulty
 
-      return matchesSearch && matchesContinent && matchesDifficulty
+      // Altitude filter by strict range
+      let matchesAltitude = true
+      if (selectedAltitude !== null) {
+        const altitude = mountain.stats.altitude
+        const nextAltitude = selectedAltitude + 1000
+        matchesAltitude = altitude >= selectedAltitude && altitude < nextAltitude
+      }
+
+      return matchesSearch && matchesContinent && matchesDifficulty && matchesAltitude
     })
 
     // Sort
@@ -68,17 +98,18 @@ export default function Home() {
     })
 
     return filtered
-  }, [mountains, debouncedSearchQuery, selectedContinent, selectedDifficulty, sortBy])
+  }, [mountains, debouncedSearchQuery, selectedContinent, selectedDifficulty, sortBy, selectedAltitude])
 
   const clearFilters = () => {
     setSearchQuery("")
     setSelectedContinent("all")
     setSelectedDifficulty("all")
     setSortBy("altitude-desc")
+    setSelectedAltitude(null)
   }
 
   const hasActiveFilters =
-    debouncedSearchQuery || selectedContinent !== "all" || selectedDifficulty !== "all" || sortBy !== "altitude-desc"
+    debouncedSearchQuery || selectedContinent !== "all" || selectedDifficulty !== "all" || sortBy !== "altitude-desc" || selectedAltitude !== null
 
   // Comparator functions
   const toggleMountainSelection = (mountain: Mountain) => {
@@ -115,7 +146,7 @@ export default function Home() {
     <div className="min-h-screen bg-black">
       <WelcomeModal />
       {/* Hero Section - Improved */}
-      <section className="relative h-screen flex items-start overflow-hidden" aria-label="Hero section">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden" aria-label="Hero section">
         {/* Background */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -130,59 +161,61 @@ export default function Home() {
         </div>
 
         {/* Hero Content */}
-        <div className="container mx-auto px-4 relative z-10 text-center pt-16 md:pt-20 lg:pt-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="space-y-4 sm:space-y-5 md:space-y-6"
+            className="space-y-6 sm:space-y-8 md:space-y-10 max-w-6xl mx-auto"
           >
             {/* Title */}
-            <div>
-              <h1 className="font-[family-name:var(--font-roboto-condensed)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter mb-3 md:mb-4">
-                <span className="block text-white mb-1.5">WORLD</span>
+            <div className="space-y-3 sm:space-y-4">
+              <h1 className="font-[family-name:var(--font-roboto-condensed)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter">
+                <span className="block text-white mb-2 sm:mb-3">WORLD</span>
                 <span className="block bg-gradient-to-r from-orange-500 via-orange-400 to-amber-500 bg-clip-text text-transparent">
                   SUMMITS
                 </span>
               </h1>
-              <p className="font-[family-name:var(--font-roboto-condensed)] text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 font-light max-w-2xl mx-auto px-4">
+              <p className="font-[family-name:var(--font-roboto-condensed)] text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 font-light max-w-3xl mx-auto px-4">
                 {t('heroSubtitle')}
               </p>
             </div>
 
-            {/* Stats Cards - Inline on mobile */}
-            <div className="flex flex-row justify-center items-center gap-4 sm:gap-5 md:gap-8 max-w-5xl mx-auto px-2">
+            {/* Stats Cards - Responsive Grid */}
+            <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8 max-w-4xl mx-auto px-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="font-[family-name:var(--font-roboto-condensed)] bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg md:rounded-xl p-3 sm:p-4 md:p-6 hover:border-orange-500/50 transition-all flex-1 max-w-[130px] sm:max-w-[150px] md:max-w-none"
+                className="font-[family-name:var(--font-roboto-condensed)] bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg md:rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 hover:border-orange-500/50 transition-all hover:scale-105"
               >
-                <MountainIcon className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-orange-500 mx-auto mb-1.5 md:mb-2" />
-                <div className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-0.5 md:mb-1">{stats.totalMountains}</div>
-                <div className="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider">{t('peaks')}</div>
+                <MountainIcon className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 lg:h-10 lg:w-10 text-orange-500 mx-auto mb-2 md:mb-3" />
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-1">{stats.totalMountains}</div>
+                <div className="text-[10px] sm:text-xs md:text-sm text-gray-400 uppercase tracking-wider">{t('peaks')}</div>
               </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="font-[family-name:var(--font-roboto-condensed)] bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg md:rounded-xl p-3 sm:p-4 md:p-6 hover:border-orange-500/50 transition-all flex-1 max-w-[130px] sm:max-w-[150px] md:max-w-none"
+                className="font-[family-name:var(--font-roboto-condensed)] bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg md:rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 hover:border-orange-500/50 transition-all hover:scale-105"
               >
-                <Globe className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-orange-500 mx-auto mb-1.5 md:mb-2" />
-                <div className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-0.5 md:mb-1">{stats.continents}</div>
-                <div className="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider">{t('continents')}</div>
+                <Globe className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 lg:h-10 lg:w-10 text-orange-500 mx-auto mb-2 md:mb-3" />
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-1">{stats.continents}</div>
+                <div className="text-[10px] sm:text-xs md:text-sm text-gray-400 uppercase tracking-wider">{t('continents')}</div>
               </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="font-[family-name:var(--font-roboto-condensed)] bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg md:rounded-xl p-3 sm:p-4 md:p-6 hover:border-orange-500/50 transition-all flex-1 max-w-[130px] sm:max-w-[150px] md:max-w-none"
+                className="font-[family-name:var(--font-roboto-condensed)] bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg md:rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 hover:border-orange-500/50 transition-all hover:scale-105"
               >
-                <TrendingUp className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-orange-500 mx-auto mb-1.5 md:mb-2" />
-                <div className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-0.5 md:mb-1">{stats.maxAltitude}<span className="text-base sm:text-lg md:text-xl">m</span></div>
-                <div className="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider">{t('highestPeak')}</div>
+                <TrendingUp className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 lg:h-10 lg:w-10 text-orange-500 mx-auto mb-2 md:mb-3" />
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-1">
+                  {stats.maxAltitude}<span className="text-sm sm:text-base md:text-lg lg:text-xl">m</span>
+                </div>
+                <div className="text-[10px] sm:text-xs md:text-sm text-gray-400 uppercase tracking-wider">{t('highestPeak')}</div>
               </motion.div>
             </div>
 
@@ -191,17 +224,17 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="pt-2 sm:pt-3"
+              className="pt-4 sm:pt-6"
             >
               <Button
                 size="lg"
                 onClick={() => {
                   document.getElementById("popular-section")?.scrollIntoView({ behavior: "smooth" })
                 }}
-                className="font-[family-name:var(--font-roboto-condensed)] bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 text-base sm:text-lg md:text-xl font-semibold rounded-lg shadow-xl shadow-orange-600/30 hover:shadow-orange-600/50 transition-all hover:scale-105"
+                className="font-[family-name:var(--font-roboto-condensed)] bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white px-8 sm:px-10 md:px-12 lg:px-16 py-5 sm:py-6 md:py-7 text-base sm:text-lg md:text-xl lg:text-2xl font-semibold rounded-lg shadow-xl shadow-orange-600/30 hover:shadow-orange-600/50 transition-all hover:scale-105"
               >
                 {t('startExploration')}
-                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6" />
               </Button>
             </motion.div>
           </motion.div>
@@ -310,65 +343,112 @@ export default function Home() {
             </motion.div>
           </motion.div>
 
-          {/* Quick Filters */}
+          {/* Filters - Compact Layout */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-wrap items-center justify-center gap-3 mb-12"
+            className="max-w-5xl mx-auto mb-8"
           >
-            <span className="text-sm text-gray-500 font-medium">{t('filterBy')}</span>
+            {/* Continent Filters */}
+            <div className="mb-4">
+              <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+                <span className="text-xs sm:text-sm text-gray-500 font-medium w-full sm:w-auto text-center sm:text-left mb-1 sm:mb-0">{t('filterBy')}</span>
 
-            <Badge
-              onClick={clearFilters}
-              className={`cursor-pointer px-4 py-2.5 transition-all ${
-                !hasActiveFilters
-                  ? "bg-primary text-white border-primary shadow-lg shadow-primary/30"
-                  : "bg-white/5 text-white border-white/20 hover:bg-white/10"
-              }`}
+                <Badge
+                  onClick={() => setSelectedContinent("all")}
+                  className={`cursor-pointer px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm transition-all ${
+                    selectedContinent === "all"
+                      ? "bg-primary text-white border-primary shadow-lg shadow-primary/30"
+                      : "bg-white/5 text-white border-white/20 hover:bg-white/10"
+                  }`}
+                >
+                  {t('all')}
+                </Badge>
+
+                {continents.slice(0, 5).map((continent) => {
+                  const count = getContinentCount(continent)
+                  const isDisabled = count === 0
+                  return (
+                    <Badge
+                      key={continent}
+                      onClick={() => !isDisabled && setSelectedContinent(continent)}
+                      className={`px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm transition-all ${
+                        isDisabled
+                          ? "cursor-not-allowed opacity-30 bg-white/5 text-gray-500 border-white/10"
+                          : selectedContinent === continent
+                          ? "cursor-pointer bg-primary text-white border-primary shadow-lg shadow-primary/30"
+                          : "cursor-pointer bg-white/5 text-white border-white/20 hover:bg-white/10 hover:border-primary/50"
+                      }`}
+                    >
+                      {continent}
+                    </Badge>
+                  )
+                })}
+              </div>
+            </div>
+
+            {/* Altitude Filters */}
+            <div>
+              <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+                <span className="text-xs sm:text-sm text-gray-500 font-medium w-full sm:w-auto text-center sm:text-left mb-1 sm:mb-0">Altitude</span>
+
+                <Badge
+                  onClick={() => setSelectedAltitude(null)}
+                  className={`cursor-pointer px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm transition-all ${
+                    selectedAltitude === null
+                      ? "bg-primary text-white border-primary shadow-lg shadow-primary/30"
+                      : "bg-white/5 text-white border-white/20 hover:bg-white/10"
+                  }`}
+                >
+                  {t('all')}
+                </Badge>
+
+                {[3000, 4000, 5000, 6000, 7000, 8000].map((altitude) => {
+                  const count = getAltitudeCount(altitude)
+                  const isDisabled = count === 0
+                  return (
+                    <Badge
+                      key={altitude}
+                      onClick={() => {
+                        if (!isDisabled) {
+                          setSelectedAltitude(altitude)
+                          setSortBy("altitude-desc")
+                        }
+                      }}
+                      className={`px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm transition-all ${
+                        isDisabled
+                          ? "cursor-not-allowed opacity-30 bg-white/5 text-gray-500 border-white/10"
+                          : selectedAltitude === altitude
+                          ? "cursor-pointer bg-primary text-white border-primary shadow-lg shadow-primary/30"
+                          : "cursor-pointer bg-white/5 text-white border-white/20 hover:bg-white/10 hover:border-primary/50"
+                      }`}
+                    >
+                      {altitude}m
+                    </Badge>
+                  )
+                })}
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Reset Filters Button */}
+          {hasActiveFilters && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="flex justify-center mb-8"
             >
-              {t('all')}
-            </Badge>
-
-            {continents.slice(0, 5).map((continent) => (
-              <Badge
-                key={continent}
-                onClick={() => setSelectedContinent(continent)}
-                className={`cursor-pointer px-4 py-2.5 transition-all ${
-                  selectedContinent === continent
-                    ? "bg-primary text-white border-primary shadow-lg shadow-primary/30"
-                    : "bg-white/5 text-white border-white/20 hover:bg-white/10 hover:border-primary/50"
-                }`}
-              >
-                {continent}
-              </Badge>
-            ))}
-
-            <Badge
-              onClick={() => {
-                setSearchQuery("8000")
-                setSortBy("altitude-desc")
-              }}
-              className={`cursor-pointer px-4 py-2.5 transition-all ${
-                searchQuery === "8000"
-                  ? "bg-primary text-white border-primary shadow-lg shadow-primary/30"
-                  : "bg-white/5 text-white border-white/20 hover:bg-white/10 hover:border-primary/50"
-              }`}
-            >
-              8000m+
-            </Badge>
-
-            {hasActiveFilters && (
               <button
                 onClick={clearFilters}
-                className="ml-2 px-4 py-2 text-sm font-medium text-white bg-white/10 hover:bg-white/20 rounded-full flex items-center gap-2 transition-all border border-white/10"
+                className="px-6 py-2.5 text-sm font-medium text-white bg-white/10 hover:bg-white/20 rounded-full flex items-center gap-2 transition-all border border-white/10"
               >
-                <X className="h-3 w-3" />
+                <X className="h-4 w-4" />
                 {t('resetFilters')}
               </button>
-            )}
-          </motion.div>
+            </motion.div>
+          )}
 
           {/* Results Count */}
           <div className="mb-6 text-center">

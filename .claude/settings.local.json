@@ -39,7 +39,10 @@
       "Bash(python scripts/generate-favicon.py:*)",
       "Bash(pip install:*)",
       "Bash(copy publicicon.svg appicon.svg)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(git remote:*)",
+      "Bash(copy:*)",
+      "Bash(ren \"app\\img-mont.png\" \"icon.png\" 2)"
     ],
     "deny": [],
     "ask": []
